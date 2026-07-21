@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Security Tools | Cybersecurity Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🛡️ Cybersecurity Hub
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+            <a href="cybersecurity.html">Cybersecurity</a>
+            <a href="networking.html">Networking</a>
+            <a href="vapt.html">VAPT</a>
+            <a href="tools.html">Tools</a>
+
+        </div>
+
+    </nav>
+
+
+    <main class="tools-container">
+
+        <h1>Cybersecurity Tools</h1>
+
+        <p>
+            Free educational tools for cybersecurity students.
+        </p>
+
+
+        <div class="tool-box">
+
+            <h2>Base64 Encoder / Decoder</h2>
+
+            <textarea
+                id="inputText"
+                placeholder="Enter your text here...">
+            </textarea>
+
+
+            <div class="tool-buttons">
+
+                <button onclick="encodeText()">
+                    Encode
+                </button>
+
+                <button onclick="decodeText()">
+                    Decode
+                </button>
+
+                <button onclick="clearText()">
+                    Clear
+                </button>
+
+            </div>
+
+
+            <textarea
+                id="outputText"
+                placeholder="Output will appear here..."
+                readonly>
+            </textarea>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <h3>🛡️ Cybersecurity Hub</h3>
+
+        <p>
+            Learn Cybersecurity. Build Your Future.
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        function encodeText() {
+
+            let input =
+                document.getElementById("inputText").value;
+
+            let output =
+                btoa(input);
+
+            document.getElementById("outputText").value =
+                output;
+
+        }
+
+
+        function decodeText() {
+
+            let input =
+                document.getElementById("inputText").value;
+
+            try {
+
+                let output =
+                    atob(input);
+
+                document.getElementById("outputText").value =
+                    output;
+
+            } catch {
+
+                document.getElementById("outputText").value =
+                    "Invalid Base64 input";
+
+            }
+
+        }
+
+
+        function clearText() {
+
+            document.getElementById("inputText").value = "";
+
+            document.getElementById("outputText").value = "";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
