@@ -209,3 +209,458 @@ footer p {
     }
 
 }
+
+.tools-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.tool-box {
+    background: white;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.tool-box textarea {
+    width: 100%;
+    min-height: 140px;
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    resize: vertical;
+    font-size: 16px;
+}
+
+.tool-buttons button {
+    padding: 12px 22px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tool-buttons button:hover {
+    background: #1d4ed8;
+}
+
+.article {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    line-height: 1.8;
+}
+
+.article h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.article h2 {
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.article h3 {
+    margin-top: 25px;
+}
+
+.article p {
+    color: #475569;
+    margin-bottom: 20px;
+}
+
+.article ul,
+.article ol {
+    margin: 20px 0 20px 30px;
+}
+
+.article li {
+    margin-bottom: 10px;
+}
+
+.article table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+}
+
+.article th,
+.article td {
+    border: 1px solid #cbd5e1;
+    padding: 15px;
+    text-align: left;
+}
+
+.article th {
+    background: #e2e8f0;
+}
+
+.date {
+    color: #64748b;
+    font-style: italic;
+}
+
+
+
+/* Latest Articles */
+
+.latest-articles {
+    padding: 70px 8%;
+    background: #eef2f7;
+    text-align: center;
+}
+
+.article-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.article-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.article-category {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.article-card h3 {
+    margin: 15px 0;
+    font-size: 22px;
+}
+
+.article-card p {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.article-card a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .article-cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================
+   ARP SIMULATOR
+========================= */
+
+.arp-simulator {
+
+    background: #f8fafc;
+
+    border: 1px solid #cbd5e1;
+
+    padding: 25px;
+
+    margin: 25px 0;
+
+    border-radius: 10px;
+
+}
+
+
+.arp-simulator label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+}
+
+
+.arp-simulator input {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.arp-simulator button {
+
+    padding: 12px 20px;
+
+    margin-right: 8px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #2563eb;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+
+.arp-simulator button:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+.arp-output {
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    background: white;
+
+    border-left: 4px solid #2563eb;
+
+    line-height: 1.8;
+
+}
+
+
+.arp-output hr {
+
+    border: none;
+
+    border-top: 1px solid #e2e8f0;
+
+    margin: 15px 0;
+
+}
+
+
+
+/* =================================
+   MODERN NETWORKING ARTICLE DESIGN
+================================= */
+
+.article {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 45px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+}
+
+
+/* Article Heading */
+
+.article h1 {
+    font-size: 46px;
+    color: #0f172a;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+
+.article h2 {
+    font-size: 30px;
+    color: #1e3a8a;
+    margin-top: 50px;
+    margin-bottom: 18px;
+    padding-left: 15px;
+    border-left: 5px solid #2563eb;
+}
+
+
+.article h3 {
+    font-size: 22px;
+    color: #1e293b;
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+
+.article p {
+    font-size: 17px;
+    color: #475569;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+/* Date / Subtitle */
+
+.article .date {
+    display: inline-block;
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+
+/* Lists */
+
+.article ul,
+.article ol {
+    margin: 20px 0 25px 25px;
+}
+
+
+.article li {
+    margin-bottom: 12px;
+    color: #475569;
+    line-height: 1.6;
+}
+
+
+.article li::marker {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+
+/* Tables */
+
+.article table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 25px 0 35px;
+    border: 1px solid #e2e8f0;
+}
+
+
+.article th {
+    background: #1e3a8a;
+    color: white;
+    padding: 16px;
+    text-align: left;
+}
+
+
+.article td {
+    padding: 16px;
+    border-top: 1px solid #e2e8f0;
+    color: #475569;
+}
+
+
+.article tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+
+/* Strong Text */
+
+.article strong {
+    color: #1d4ed8;
+}
+
+
+/* Article Links */
+
+.article a {
+    color: #2563eb;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.article a:hover {
+    text-decoration: underline;
+}
+
+
+/* Code / Commands */
+
+.article code {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+
+/* Networking Topic Highlight */
+
+.networking-topic {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid #2563eb;
+    padding: 22px;
+    margin: 25px 0;
+    border-radius: 10px;
+}
+
+
+/* Mobile Responsive */
+
+@media (max-width: 700px) {
+
+    .article {
+        margin: 25px 15px;
+        padding: 25px 20px;
+    }
+
+
+    .article h1 {
+        font-size: 34px;
+    }
+
+
+    .article h2 {
+        font-size: 25px;
+    }
+
+
+    .article p {
+        font-size: 16px;
+    }
+
+
+    .article table {
+        display: block;
+        overflow-x: auto;
+    }
+
+}
