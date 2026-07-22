@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Routing Explained: Complete Beginner Guide | Cybersecurity Hub</title>
+
+    <meta name="description"
+          content="Learn computer networking routing from beginner to advanced level including routing tables, static routing, dynamic routing, default routes, RIP, OSPF and EIGRP.">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🛡️ Cybersecurity Hub
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="cybersecurity.html">Cybersecurity</a>
+
+            <a href="networking.html">Networking</a>
+
+            <a href="vapt.html">VAPT</a>
+
+            <a href="tools.html">Tools</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main Article -->
+
+    <main class="article">
+
+
+        <h1>
+            Routing Explained: Complete Beginner Guide
+        </h1>
+
+
+        <p class="date">
+            Learn Computer Networking Routing from Beginner to Advanced
+        </p>
+
+
+        <p>
+
+            Routing is one of the most important concepts in computer
+            networking. It allows data packets to travel from one network
+            to another network.
+
+        </p>
+
+
+        <!-- What is Routing -->
+
+        <h2>
+            What is Routing?
+        </h2>
+
+
+        <p>
+
+            Routing is the process of selecting the best path for data
+            packets to travel from a source network to a destination network.
+
+        </p>
+
+
+        <p>
+
+            Routers use routing information to decide where packets
+            should be forwarded.
+
+        </p>
+
+
+        <p>
+
+            For example, when you open a website, your data may pass through
+            multiple routers before reaching the destination server.
+
+        </p>
+
+
+        <!-- Router -->
+
+        <h2>
+            What is a Router?
+        </h2>
+
+
+        <p>
+
+            A router is a Layer 3 networking device that connects
+            different networks.
+
+        </p>
+
+
+        <p>
+
+            Routers use IP addresses to forward packets between networks.
+
+        </p>
+
+
+        <p>
+            <strong>
+                Example:
+            </strong>
+        </p>
+
+
+        <ul>
+
+            <li>
+                Network A: 192.168.1.0/24
+            </li>
+
+            <li>
+                Network B: 192.168.2.0/24
+            </li>
+
+        </ul>
+
+
+        <p>
+
+            A router can allow devices in these different networks
+            to communicate with each other.
+
+        </p>
+
+
+        <!-- Routing Table -->
+
+        <h2>
+            What is a Routing Table?
+        </h2>
+
+
+        <p>
+
+            A routing table is a data structure maintained by a router
+            that contains information about available networks and paths.
+
+        </p>
+
+
+        <p>
+
+            A routing table commonly contains:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Destination Network
+            </li>
+
+            <li>
+                Subnet Mask
+            </li>
+
+            <li>
+                Next Hop
+            </li>
+
+            <li>
+                Exit Interface
+            </li>
+
+            <li>
+                Route Metric
+            </li>
+
+        </ul>
+
+
+        <p>
+
+            The router checks the destination IP address of a packet
+            and looks for the best matching route in its routing table.
+
+        </p>
+
+
+        <!-- Longest Prefix Match -->
+
+        <h2>
+            Longest Prefix Match
+        </h2>
+
+
+        <p>
+
+            When multiple routes match a destination IP address,
+            the router selects the route with the longest prefix match.
+
+        </p>
+
+
+        <p>
+
+            In simple terms, the most specific route is preferred.
+
+        </p>
+
+
+        <p>
+            <strong>
+                More specific route = Better match
+            </strong>
+        </p>
+
+
+        <!-- Types of Routing -->
+
+        <h2>
+            Types of Routing
+        </h2>
+
+
+        <h3>
+            1. Static Routing
+        </h3>
+
+
+        <p>
+
+            Static routing is manually configured by a network administrator.
+
+        </p>
+
+
+        <p>
+
+            The administrator manually specifies the path
+            to a destination network.
+
+        </p>
+
+
+        <p>
+            <strong>
+                Advantages:
+            </strong>
+        </p>
+
+
+        <ul>
+
+            <li>
+                Simple for small networks
+            </li>
+
+            <li>
+                No routing protocol overhead
+            </li>
+
+            <li>
+                More control over traffic paths
+            </li>
+
+        </ul>
+
+
+        <p>
+            <strong>
+                Disadvantages:
+            </strong>
+        </p>
+
+
+        <ul>
+
+            <li>
+                Manual configuration required
+            </li>
+
+            <li>
+                Difficult to manage in large networks
+            </li>
+
+            <li>
+                Does not automatically adapt to network failures
+            </li>
+
+        </ul>
+
+
+        <h3>
+            2. Dynamic Routing
+        </h3>
+
+
+        <p>
+
+            Dynamic routing uses routing protocols to automatically
+            learn and exchange network information.
+
+        </p>
+
+
+        <p>
+
+            Dynamic routing protocols can automatically select
+            alternate paths when a network path fails.
+
+        </p>
+
+
+        <!-- Default Route -->
+
+        <h2>
+            What is a Default Route?
+        </h2>
+
+
+        <p>
+
+            A default route is used when a router does not have
+            a specific route for the destination network.
+
+        </p>
+
+
+        <p>
+
+            The default route is commonly represented as:
+
+        </p>
+
+
+        <p>
+            <strong>
+                0.0.0.0/0
+            </strong>
+        </p>
+
+
+        <p>
+
+            Home routers commonly use a default route
+            to forward Internet traffic to the ISP.
+
+        </p>
+
+
+        <!-- Routing Protocols -->
+
+        <h2>
+            What are Routing Protocols?
+        </h2>
+
+
+        <p>
+
+            Routing protocols allow routers to exchange information
+            about available networks.
+
+        </p>
+
+
+        <p>
+
+            Important routing protocols include:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                RIP
+            </li>
+
+            <li>
+                OSPF
+            </li>
+
+            <li>
+                EIGRP
+            </li>
+
+            <li>
+                BGP
+            </li>
+
+        </ul>
+
+
+        <!-- RIP -->
+
+        <h2>
+            RIP (Routing Information Protocol)
+        </h2>
+
+
+        <p>
+
+            RIP is a distance-vector routing protocol.
+
+        </p>
+
+
+        <p>
+
+            RIP uses hop count as its routing metric.
+
+        </p>
+
+
+        <p>
+
+            The maximum hop count supported by RIP is 15.
+
+            A hop count of 16 is considered unreachable.
+
+        </p>
+
+
+        <!-- OSPF -->
+
+        <h2>
+            OSPF (Open Shortest Path First)
+        </h2>
+
+
+        <p>
+
+            OSPF is a link-state routing protocol.
+
+        </p>
+
+
+        <p>
+
+            OSPF uses the Shortest Path First algorithm
+            to calculate the best path.
+
+        </p>
+
+
+        <p>
+
+            OSPF is widely used in enterprise networks.
+
+        </p>
+
+
+        <p>
+
+            OSPF supports areas.
+
+            Area 0 is known as the backbone area.
+
+        </p>
+
+
+        <!-- EIGRP -->
+
+        <h2>
+            EIGRP
+        </h2>
+
+
+        <p>
+
+            EIGRP is an advanced distance-vector routing protocol
+            commonly associated with Cisco networking environments.
+
+        </p>
+
+
+        <p>
+
+            EIGRP uses the DUAL algorithm to calculate
+            loop-free paths.
+
+        </p>
+
+
+        <!-- BGP -->
+
+        <h2>
+            BGP (Border Gateway Protocol)
+        </h2>
+
+
+        <p>
+
+            BGP is used to exchange routing information
+            between different autonomous systems.
+
+        </p>
+
+
+        <p>
+
+            BGP is the primary routing protocol used
+            to route traffic across the Internet.
+
+        </p>
+
+
+        <!-- Administrative Distance -->
+
+        <h2>
+            What is Administrative Distance?
+        </h2>
+
+
+        <p>
+
+            Administrative Distance is used by a router
+            to determine the trustworthiness of a routing source.
+
+        </p>
+
+
+        <p>
+
+            A lower Administrative Distance is preferred.
+
+        </p>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Route Source
+                </th>
+
+                <th>
+                    Administrative Distance
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Connected
+                </td>
+
+                <td>
+                    0
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Static
+                </td>
+
+                <td>
+                    1
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    EIGRP
+                </td>
+
+                <td>
+                    90
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    OSPF
+                </td>
+
+                <td>
+                    110
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    RIP
+                </td>
+
+                <td>
+                    120
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <!-- Routing and Security -->
+
+        <h2>
+            Importance of Routing in Cybersecurity
+        </h2>
+
+
+        <p>
+
+            Routing knowledge is extremely important for cybersecurity
+            professionals.
+
+        </p>
+
+
+        <p>
+
+            Understanding routing helps security professionals:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Analyze network traffic
+            </li>
+
+            <li>
+                Understand packet flow
+            </li>
+
+            <li>
+                Configure firewalls
+            </li>
+
+            <li>
+                Identify suspicious routes
+            </li>
+
+            <li>
+                Understand network segmentation
+            </li>
+
+            <li>
+                Troubleshoot security incidents
+            </li>
+
+        </ul>
+
+
+        <!-- Routing Example -->
+
+        <h2>
+            Simple Routing Example
+        </h2>
+
+
+        <p>
+
+            Suppose a computer belongs to:
+
+        </p>
+
+
+        <p>
+            <strong>
+                192.168.1.0/24
+            </strong>
+        </p>
+
+
+        <p>
+
+            It wants to communicate with:
+
+        </p>
+
+
+        <p>
+            <strong>
+                192.168.2.0/24
+            </strong>
+        </p>
+
+
+        <p>
+
+            Because these are different networks,
+            the packet must be sent to a router.
+
+        </p>
+
+
+        <p>
+
+            The router checks its routing table,
+            selects the best route and forwards the packet
+            toward the destination network.
+
+        </p>
+
+
+        <!-- Conclusion -->
+
+        <h2>
+            Conclusion
+        </h2>
+
+
+        <p>
+
+            Routing is the process of selecting the best path
+            for data to travel between different networks.
+
+        </p>
+
+
+        <p>
+
+            To understand routing properly, learn:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Routing Tables
+            </li>
+
+            <li>
+                Static Routing
+            </li>
+
+            <li>
+                Dynamic Routing
+            </li>
+
+            <li>
+                Default Routes
+            </li>
+
+            <li>
+                RIP
+            </li>
+
+            <li>
+                OSPF
+            </li>
+
+            <li>
+                EIGRP
+            </li>
+
+            <li>
+                BGP
+            </li>
+
+        </ul>
+
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>
+            🛡️ Cybersecurity Hub
+        </h3>
+
+
+        <p>
+            Learn Cybersecurity.
+            Build Your Future.
+        </p>
+
+
+        <p class="copyright">
+            © 2026 Cybersecurity Hub.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

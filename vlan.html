@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        VLAN Explained: Types, Access Port, Trunk Port & 802.1Q | Cybersecurity Hub
+    </title>
+
+    <meta name="description"
+          content="Learn VLAN from beginner to advanced. Understand VLAN types, VLAN ID, access ports, trunk ports, 802.1Q tagging, native VLAN, inter-VLAN routing and VLAN security.">
+
+    <meta name="keywords"
+          content="VLAN, VLAN explained, what is VLAN, VLAN types, VLAN ID, access port, trunk port, 802.1Q, VLAN tagging, native VLAN, inter VLAN routing, VLAN security">
+
+    <meta name="author"
+          content="Cybersecurity Hub">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <link rel="canonical"
+          href="https://surajbhai126.github.io/Surajsecops/vlan.html">
+
+
+    <!-- Open Graph SEO -->
+
+    <meta property="og:title"
+          content="VLAN Explained: Types, Access Ports, Trunk Ports & 802.1Q">
+
+    <meta property="og:description"
+          content="Complete beginner-friendly guide to VLANs, VLAN IDs, access ports, trunk ports, 802.1Q tagging, inter-VLAN routing and VLAN security.">
+
+    <meta property="og:type"
+          content="article">
+
+    <meta property="og:url"
+          content="https://surajbhai126.github.io/Surajsecops/vlan.html">
+
+    <meta property="og:site_name"
+          content="Cybersecurity Hub">
+
+
+    <!-- Twitter Card -->
+
+    <meta name="twitter:card"
+          content="summary">
+
+    <meta name="twitter:title"
+          content="VLAN Explained: Complete Networking Guide">
+
+    <meta name="twitter:description"
+          content="Learn VLAN, VLAN types, access ports, trunk ports, 802.1Q, inter-VLAN routing and VLAN security.">
+
+
+    <!-- Stylesheet -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+
+    <!-- Article Schema -->
+
+    <script type="application/ld+json">
+
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+
+        "headline": "VLAN Explained: Types, Access Port, Trunk Port and 802.1Q",
+
+        "description": "Complete guide to VLANs including VLAN types, VLAN IDs, access ports, trunk ports, 802.1Q tagging, inter-VLAN routing and VLAN security.",
+
+        "author": {
+            "@type": "Organization",
+            "name": "Cybersecurity Hub"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "Cybersecurity Hub"
+        },
+
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://surajbhai126.github.io/Surajsecops/vlan.html"
+        },
+
+        "url": "https://surajbhai126.github.io/Surajsecops/vlan.html",
+
+        "keywords": [
+            "VLAN",
+            "VLAN Types",
+            "VLAN ID",
+            "Access Port",
+            "Trunk Port",
+            "802.1Q",
+            "Inter-VLAN Routing",
+            "VLAN Security"
+        ]
+    }
+
+    </script>
+
+
+    <!-- Breadcrumb Schema -->
+
+    <script type="application/ld+json">
+
+    {
+        "@context": "https://schema.org",
+
+        "@type": "BreadcrumbList",
+
+        "itemListElement": [
+
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://surajbhai126.github.io/Surajsecops/index.html"
+            },
+
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Networking",
+                "item": "https://surajbhai126.github.io/Surajsecops/networking.html"
+            },
+
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "VLAN",
+                "item": "https://surajbhai126.github.io/Surajsecops/vlan.html"
+            }
+
+        ]
+    }
+
+    </script>
+
+
+    <!-- FAQ Schema -->
+
+    <script type="application/ld+json">
+
+    {
+        "@context": "https://schema.org",
+
+        "@type": "FAQPage",
+
+        "mainEntity": [
+
+            {
+                "@type": "Question",
+
+                "name": "What is a VLAN?",
+
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A VLAN, or Virtual Local Area Network, logically divides a physical network into multiple separate networks."
+                }
+            },
+
+            {
+                "@type": "Question",
+
+                "name": "What is the difference between an access port and a trunk port?",
+
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "An access port normally carries traffic for one VLAN, while a trunk port carries traffic for multiple VLANs."
+                }
+            },
+
+            {
+                "@type": "Question",
+
+                "name": "What is VLAN tagging?",
+
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "VLAN tagging adds VLAN identification information to Ethernet frames. IEEE 802.1Q is the commonly used VLAN tagging standard."
+                }
+            },
+
+            {
+                "@type": "Question",
+
+                "name": "What is Inter-VLAN Routing?",
+
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Inter-VLAN routing allows devices in different VLANs to communicate using a Layer 3 device such as a router or Layer 3 switch."
+                }
+            }
+
+        ]
+    }
+
+    </script>
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🛡️ Cybersecurity Hub
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="cybersecurity.html">
+                Cybersecurity
+            </a>
+
+            <a href="networking.html">
+                Networking
+            </a>
+
+            <a href="vapt.html">
+                VAPT
+            </a>
+
+            <a href="tools.html">
+                Tools
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main Article -->
+
+    <main class="article">
+
+
+        <h1>
+            VLAN Explained: Complete Guide to VLANs, Access Ports, Trunk Ports & 802.1Q
+        </h1>
+
+
+        <p class="date">
+            Learn VLANs from Beginner to Advanced
+        </p>
+
+
+        <p>
+
+            VLAN stands for Virtual Local Area Network.
+
+            A VLAN allows a physical network to be logically divided
+            into multiple separate networks.
+
+        </p>
+
+
+        <p>
+
+            VLANs are widely used in enterprise networking,
+            cybersecurity and network segmentation.
+
+        </p>
+
+
+        <!-- What is VLAN -->
+
+        <h2>
+            What is a VLAN?
+        </h2>
+
+
+        <p>
+
+            A VLAN is a logical network created on a physical
+            network infrastructure.
+
+        </p>
+
+
+        <p>
+
+            A single physical switch can be divided into multiple
+            logical networks using VLANs.
+
+        </p>
+
+
+        <p>
+
+            For example:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                VLAN 10 – Sales
+            </li>
+
+            <li>
+                VLAN 20 – HR
+            </li>
+
+            <li>
+                VLAN 30 – IT
+            </li>
+
+            <li>
+                VLAN 40 – Management
+            </li>
+
+        </ul>
+
+
+        <p>
+
+            Even if all devices are connected to the same physical
+            switch, VLANs logically separate their networks.
+
+        </p>
+
+
+        <!-- Why VLAN -->
+
+        <h2>
+            Why are VLANs Used?
+        </h2>
+
+
+        <ul>
+
+            <li>
+                Network segmentation
+            </li>
+
+            <li>
+                Improved network security
+            </li>
+
+            <li>
+                Reduced broadcast traffic
+            </li>
+
+            <li>
+                Better network management
+            </li>
+
+            <li>
+                Logical separation of departments
+            </li>
+
+            <li>
+                Improved network performance
+            </li>
+
+        </ul>
+
+
+        <!-- Broadcast Domain -->
+
+        <h2>
+            VLAN and Broadcast Domain
+        </h2>
+
+
+        <p>
+
+            A broadcast domain is a group of devices that receive
+            broadcast traffic from each other.
+
+        </p>
+
+
+        <p>
+
+            Each VLAN represents a separate broadcast domain.
+
+        </p>
+
+
+        <p>
+
+            For example:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                VLAN 10 ≠ VLAN 20
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Devices in different VLANs cannot communicate directly
+            at Layer 2.
+
+            Communication between different VLANs requires
+            a Layer 3 device.
+
+        </p>
+
+
+        <!-- VLAN ID -->
+
+        <h2>
+            What is a VLAN ID?
+        </h2>
+
+
+        <p>
+
+            A VLAN ID is a numerical identifier used to identify
+            a specific VLAN on a network.
+
+        </p>
+
+
+        <p>
+
+            Each VLAN is assigned a unique VLAN ID.
+
+        </p>
+
+
+        <p>
+
+            Example:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                VLAN 10 – Sales
+            </li>
+
+            <li>
+                VLAN 20 – HR
+            </li>
+
+            <li>
+                VLAN 30 – IT
+            </li>
+
+        </ul>
+
+
+        <p>
+
+            Switches use VLAN IDs to logically separate
+            network traffic.
+
+        </p>
+
+
+        <!-- VLAN Types -->
+
+        <h2>
+            Types of VLANs
+        </h2>
+
+
+        <h3>
+            1. Default VLAN
+        </h3>
+
+
+        <p>
+
+            The default VLAN is usually VLAN 1.
+
+            Switch ports are commonly assigned to this VLAN
+            by default.
+
+        </p>
+
+
+        <h3>
+            2. Data VLAN
+        </h3>
+
+
+        <p>
+
+            A Data VLAN carries normal user traffic such as
+            web browsing, file transfers and application traffic.
+
+        </p>
+
+
+        <h3>
+            3. Voice VLAN
+        </h3>
+
+
+        <p>
+
+            A Voice VLAN is used for VoIP phones.
+
+            It helps separate voice traffic from normal data traffic.
+
+        </p>
+
+
+        <h3>
+            4. Management VLAN
+        </h3>
+
+
+        <p>
+
+            A Management VLAN is used to manage network devices
+            such as switches, routers and firewalls.
+
+        </p>
+
+
+        <h3>
+            5. Native VLAN
+        </h3>
+
+
+        <p>
+
+            The Native VLAN carries untagged traffic
+            over an 802.1Q trunk link.
+
+        </p>
+
+
+        <!-- Access Port -->
+
+        <h2>
+            What is an Access Port?
+        </h2>
+
+
+        <p>
+
+            An access port is normally assigned to a single VLAN.
+
+        </p>
+
+
+        <p>
+
+            Access ports are commonly used to connect end devices such as:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Computers
+            </li>
+
+            <li>
+                Printers
+            </li>
+
+            <li>
+                Servers
+            </li>
+
+            <li>
+                IP Phones
+            </li>
+
+        </ul>
+
+
+        <p>
+
+            For example, a computer connected to an access port
+            assigned to VLAN 10 belongs to VLAN 10.
+
+        </p>
+
+
+        <!-- Trunk Port -->
+
+        <h2>
+            What is a Trunk Port?
+        </h2>
+
+
+        <p>
+
+            A trunk port carries traffic from multiple VLANs
+            over a single physical link.
+
+        </p>
+
+
+        <p>
+
+            Trunk ports are commonly used between:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Switch to Switch
+            </li>
+
+            <li>
+                Switch to Router
+            </li>
+
+            <li>
+                Switch to Layer 3 Switch
+            </li>
+
+        </ul>
+
+
+        <!-- Access vs Trunk -->
+
+        <h2>
+            Access Port vs Trunk Port
+        </h2>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Access Port
+                </th>
+
+                <th>
+                    Trunk Port
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Carries traffic for one VLAN
+                </td>
+
+                <td>
+                    Carries traffic for multiple VLANs
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Usually connects end devices
+                </td>
+
+                <td>
+                    Usually connects network devices
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Frames are normally untagged
+                </td>
+
+                <td>
+                    VLAN tags identify VLAN traffic
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <!-- VLAN Tagging -->
+
+        <h2>
+            What is VLAN Tagging?
+        </h2>
+
+
+        <p>
+
+            VLAN tagging is the process of adding VLAN identification
+            information to an Ethernet frame.
+
+        </p>
+
+
+        <p>
+
+            The most commonly used VLAN tagging standard is:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                IEEE 802.1Q
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            VLAN tags allow switches to identify which VLAN
+            a frame belongs to.
+
+        </p>
+
+
+        <!-- 802.1Q -->
+
+        <h2>
+            What is IEEE 802.1Q?
+        </h2>
+
+
+        <p>
+
+            IEEE 802.1Q is a networking standard used for
+            VLAN tagging on Ethernet networks.
+
+        </p>
+
+
+        <p>
+
+            It allows multiple VLANs to travel across
+            a single trunk link.
+
+        </p>
+
+
+        <p>
+
+            The VLAN tag contains information that helps
+            network devices identify the VLAN associated
+            with a frame.
+
+        </p>
+
+
+        <!-- Inter VLAN -->
+
+        <h2>
+            What is Inter-VLAN Routing?
+        </h2>
+
+
+        <p>
+
+            Devices in different VLANs cannot communicate directly
+            at Layer 2.
+
+        </p>
+
+
+        <p>
+
+            Inter-VLAN routing allows communication between
+            different VLANs using a Layer 3 device.
+
+        </p>
+
+
+        <p>
+
+            Inter-VLAN routing can be performed using:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Router-on-a-Stick
+            </li>
+
+            <li>
+                Layer 3 Switch
+            </li>
+
+        </ul>
+
+
+        <!-- VLAN Security -->
+
+        <h2>
+            VLANs and Network Security
+        </h2>
+
+
+        <p>
+
+            VLANs are important for network security because
+            they help segment networks.
+
+        </p>
+
+
+        <p>
+
+            Common security zones may include:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                User VLAN
+            </li>
+
+            <li>
+                Server VLAN
+            </li>
+
+            <li>
+                Guest VLAN
+            </li>
+
+            <li>
+                Management VLAN
+            </li>
+
+        </ul>
+
+
+        <p>
+
+            Firewalls and access control policies can be applied
+            between different network segments.
+
+        </p>
+
+
+        <!-- VLAN Hopping -->
+
+        <h2>
+            What is VLAN Hopping?
+        </h2>
+
+
+        <p>
+
+            VLAN hopping is a network attack where an attacker
+            attempts to access traffic belonging to another VLAN.
+
+        </p>
+
+
+        <p>
+
+            Proper switch configuration and security controls
+            can help reduce the risk of VLAN hopping.
+
+        </p>
+
+
+        <h3>
+            VLAN Security Best Practices
+        </h3>
+
+
+        <ul>
+
+            <li>
+                Disable unused switch ports
+            </li>
+
+            <li>
+                Avoid using the default VLAN for management
+            </li>
+
+            <li>
+                Configure trunk ports carefully
+            </li>
+
+            <li>
+                Use dedicated management VLANs
+            </li>
+
+            <li>
+                Allow only required VLANs on trunk links
+            </li>
+
+        </ul>
+
+
+        <!-- Practical Example -->
+
+        <h2>
+            Practical VLAN Example
+        </h2>
+
+
+        <p>
+
+            Imagine an organization with three departments:
+
+        </p>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Department
+                </th>
+
+                <th>
+                    VLAN ID
+                </th>
+
+                <th>
+                    Network Purpose
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Sales
+                </td>
+
+                <td>
+                    VLAN 10
+                </td>
+
+                <td>
+                    Sales users
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    HR
+                </td>
+
+                <td>
+                    VLAN 20
+                </td>
+
+                <td>
+                    HR users
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    IT
+                </td>
+
+                <td>
+                    VLAN 30
+                </td>
+
+                <td>
+                    IT users
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <p>
+
+            Each department can be logically separated
+            even if all devices are connected to the same
+            physical switch.
+
+        </p>
+
+
+        <!-- Conclusion -->
+
+        <h2>
+            Conclusion
+        </h2>
+
+
+        <p>
+
+            VLANs are an essential part of modern networking.
+
+            They allow organizations to logically divide networks,
+            reduce broadcast traffic and improve security.
+
+        </p>
+
+
+        <p>
+
+            To master VLANs, understand:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                VLAN ID
+            </li>
+
+            <li>
+                VLAN Types
+            </li>
+
+            <li>
+                Access Ports
+            </li>
+
+            <li>
+                Trunk Ports
+            </li>
+
+            <li>
+                IEEE 802.1Q Tagging
+            </li>
+
+            <li>
+                Native VLAN
+            </li>
+
+            <li>
+                Inter-VLAN Routing
+            </li>
+
+            <li>
+                VLAN Security
+            </li>
+
+        </ul>
+
+
+        <!-- Related Topics -->
+
+        <section class="related-topics">
+
+            <h2>
+                Related Networking Topics
+            </h2>
+
+
+            <p>
+
+                To understand IP addresses, CIDR and subnet masks,
+                read our complete guide on
+
+                <a href="ip-addressing.html">
+                    IP Addressing
+                </a>.
+
+            </p>
+
+
+            <p>
+
+                To understand how large networks are divided
+                into smaller networks, read our guide on
+
+                <a href="subnetting.html">
+                    Subnetting
+                </a>.
+
+            </p>
+
+
+            <p>
+
+                To understand communication between different VLANs,
+                read our complete guide on
+
+                <a href="inter-vlan-routing.html">
+                    Inter-VLAN Routing
+                </a>.
+
+            </p>
+
+
+            <p>
+
+                To understand how devices communicate across
+                different networking layers, read our guide on
+
+                <a href="tcp-ip-model.html">
+                    TCP/IP Model
+                </a>.
+
+            </p>
+
+
+            <p>
+
+                To understand the seven layers of networking,
+                read our complete guide on
+
+                <a href="osi-model.html">
+                    OSI Model
+                </a>.
+
+            </p>
+
+
+            <p>
+
+                To understand how switches prevent network loops,
+                read our guide on
+
+                <a href="stp.html">
+                    Spanning Tree Protocol (STP)
+                </a>.
+
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+
+        <h3>
+            🛡️ Cybersecurity Hub
+        </h3>
+
+
+        <p>
+            Learn Cybersecurity.
+            Build Your Future.
+        </p>
+
+
+        <p class="copyright">
+            © 2026 Cybersecurity Hub.
+            All Rights Reserved.
+        </p>
+
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Subnetting Explained: CIDR, Subnet Mask & Examples | Cybersecurity Hub
+    </title>
+
+    <meta name="description"
+          content="Learn subnetting from beginner to advanced with subnet masks, CIDR notation, network and broadcast addresses, usable hosts, VLSM and practical subnetting examples.">
+
+    <meta name="author"
+          content="Cybersecurity Hub">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <link rel="canonical"
+          href="https://surajbhai126.github.io/Surajsecops/subnetting.html">
+
+    <!-- Open Graph SEO -->
+
+    <meta property="og:title"
+          content="Subnetting Explained: CIDR, Subnet Mask & Examples">
+
+    <meta property="og:description"
+          content="Learn subnetting, CIDR, subnet masks, network addresses, broadcast addresses, VLSM and practical subnetting examples.">
+
+    <meta property="og:type"
+          content="article">
+
+    <meta property="og:url"
+          content="https://surajbhai126.github.io/Surajsecops/subnetting.html">
+
+    <meta property="og:site_name"
+          content="Cybersecurity Hub">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🛡️ Cybersecurity Hub
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="cybersecurity.html">
+                Cybersecurity
+            </a>
+
+            <a href="networking.html">
+                Networking
+            </a>
+
+            <a href="vapt.html">
+                VAPT
+            </a>
+
+            <a href="tools.html">
+                Tools
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main Article -->
+
+    <main class="article">
+
+
+        <h1>
+            Subnetting Explained: CIDR, Subnet Mask & Practical Examples
+        </h1>
+
+
+        <p class="date">
+            Learn Subnetting from Beginner to Advanced
+        </p>
+
+
+        <p>
+
+            Subnetting is one of the most important concepts
+            in computer networking and cybersecurity.
+
+            It allows a large IP network to be divided into smaller
+            logical networks called subnets.
+
+        </p>
+
+
+        <!-- What is Subnetting -->
+
+
+        <h2>
+            What is Subnetting?
+        </h2>
+
+
+        <p>
+
+            Subnetting is the process of dividing a large IP network
+            into smaller networks.
+
+            These smaller networks are called subnets.
+
+        </p>
+
+
+        <p>
+
+            For example:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                192.168.1.0/24
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            This network can be divided into multiple smaller networks
+            according to the organization's requirements.
+
+        </p>
+
+
+        <p>
+
+            Subnetting helps organizations efficiently use IP addresses,
+            improve network management and separate different departments
+            or security zones.
+
+        </p>
+
+
+        <!-- Why Subnetting -->
+
+
+        <h2>
+            Why is Subnetting Important?
+        </h2>
+
+
+        <ul>
+
+            <li>
+                Efficient use of IP addresses
+            </li>
+
+            <li>
+                Reduces unnecessary broadcast traffic
+            </li>
+
+            <li>
+                Improves network performance
+            </li>
+
+            <li>
+                Improves network security
+            </li>
+
+            <li>
+                Makes network management easier
+            </li>
+
+            <li>
+                Helps separate different departments
+            </li>
+
+        </ul>
+
+
+        <!-- IPv4 Structure -->
+
+
+        <h2>
+            IPv4 Address Structure
+        </h2>
+
+
+        <p>
+
+            An IPv4 address contains 32 bits.
+
+            These 32 bits are divided into four 8-bit octets.
+
+        </p>
+
+
+        <p>
+
+            Example:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                192.168.1.10
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Each octet contains 8 bits.
+
+        </p>
+
+
+        <p>
+
+            Therefore:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                8 + 8 + 8 + 8 = 32 bits
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Each octet can contain a value from:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                0 to 255
+            </strong>
+
+        </p>
+
+
+        <!-- Subnet Mask -->
+
+
+        <h2>
+            What is a Subnet Mask?
+        </h2>
+
+
+        <p>
+
+            A subnet mask is used to identify which portion
+            of an IP address represents the network and which
+            portion represents the host.
+
+        </p>
+
+
+        <p>
+
+            Example:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                IP Address:
+            </strong>
+
+            192.168.1.10
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                Subnet Mask:
+            </strong>
+
+            255.255.255.0
+
+        </p>
+
+
+        <p>
+
+            In this example:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                192.168.1 represents the Network Portion
+            </li>
+
+            <li>
+                10 represents the Host Portion
+            </li>
+
+        </ul>
+
+
+        <!-- CIDR -->
+
+
+        <h2>
+            What is CIDR Notation?
+        </h2>
+
+
+        <p>
+
+            CIDR stands for
+            <strong>
+                Classless Inter-Domain Routing
+            </strong>.
+
+        </p>
+
+
+        <p>
+
+            CIDR notation represents the number of network bits
+            using a slash followed by a number.
+
+        </p>
+
+
+        <p>
+
+            Example:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                192.168.1.0/24
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            The <strong>/24</strong> means that the first 24 bits
+            are used for the network portion.
+
+        </p>
+
+
+        <p>
+
+            The remaining 8 bits are available for hosts.
+
+        </p>
+
+
+        <!-- Common Subnet Masks -->
+
+
+        <h2>
+            Common Subnet Masks
+        </h2>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    CIDR
+                </th>
+
+                <th>
+                    Subnet Mask
+                </th>
+
+                <th>
+                    Total Addresses
+                </th>
+
+                <th>
+                    Usable Hosts
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    /24
+                </td>
+
+                <td>
+                    255.255.255.0
+                </td>
+
+                <td>
+                    256
+                </td>
+
+                <td>
+                    254
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    /25
+                </td>
+
+                <td>
+                    255.255.255.128
+                </td>
+
+                <td>
+                    128
+                </td>
+
+                <td>
+                    126
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    /26
+                </td>
+
+                <td>
+                    255.255.255.192
+                </td>
+
+                <td>
+                    64
+                </td>
+
+                <td>
+                    62
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    /27
+                </td>
+
+                <td>
+                    255.255.255.224
+                </td>
+
+                <td>
+                    32
+                </td>
+
+                <td>
+                    30
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    /28
+                </td>
+
+                <td>
+                    255.255.255.240
+                </td>
+
+                <td>
+                    16
+                </td>
+
+                <td>
+                    14
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <!-- Usable Hosts Formula -->
+
+
+        <h2>
+            How to Calculate Usable Hosts?
+        </h2>
+
+
+        <p>
+
+            For normal IPv4 subnets, the formula is:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                Usable Hosts = 2ⁿ − 2
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Here, <strong>n</strong> represents the number
+            of host bits.
+
+        </p>
+
+
+        <p>
+
+            We subtract 2 because:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                One address is reserved for the Network Address
+            </li>
+
+            <li>
+                One address is reserved for the Broadcast Address
+            </li>
+
+        </ul>
+
+
+        <p>
+
+            Note: /31 and /32 networks are special cases and
+            are commonly used for point-to-point links and
+            host routes.
+
+        </p>
+
+
+        <!-- /24 Example -->
+
+
+        <h2>
+            Example: 192.168.1.0/24
+        </h2>
+
+
+        <p>
+
+            A /24 network has:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                24 Network Bits
+            </li>
+
+            <li>
+                8 Host Bits
+            </li>
+
+        </ul>
+
+
+        <p>
+
+            Total Addresses:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                2⁸ = 256 Addresses
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Usable Hosts:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                256 − 2 = 254 Usable Hosts
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Network Address:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                192.168.1.0
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Usable Host Range:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                192.168.1.1 – 192.168.1.254
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Broadcast Address:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                192.168.1.255
+            </strong>
+
+        </p>
+
+
+        <!-- /26 Example -->
+
+
+        <h2>
+            Practical Example: Dividing a /24 Network
+        </h2>
+
+
+        <p>
+
+            Suppose we have:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                192.168.1.0/24
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            If we divide this network into /26 subnets,
+            we get four smaller networks.
+
+        </p>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Subnet
+                </th>
+
+                <th>
+                    Network Address
+                </th>
+
+                <th>
+                    Usable Host Range
+                </th>
+
+                <th>
+                    Broadcast Address
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    1
+                </td>
+
+                <td>
+                    192.168.1.0/26
+                </td>
+
+                <td>
+                    192.168.1.1 - 192.168.1.62
+                </td>
+
+                <td>
+                    192.168.1.63
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    2
+                </td>
+
+                <td>
+                    192.168.1.64/26
+                </td>
+
+                <td>
+                    192.168.1.65 - 192.168.1.126
+                </td>
+
+                <td>
+                    192.168.1.127
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    3
+                </td>
+
+                <td>
+                    192.168.1.128/26
+                </td>
+
+                <td>
+                    192.168.1.129 - 192.168.1.190
+                </td>
+
+                <td>
+                    192.168.1.191
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    4
+                </td>
+
+                <td>
+                    192.168.1.192/26
+                </td>
+
+                <td>
+                    192.168.1.193 - 192.168.1.254
+                </td>
+
+                <td>
+                    192.168.1.255
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <!-- VLSM -->
+
+
+        <h2>
+            What is VLSM?
+        </h2>
+
+
+        <p>
+
+            VLSM stands for
+            <strong>
+                Variable Length Subnet Mask
+            </strong>.
+
+        </p>
+
+
+        <p>
+
+            VLSM allows different subnets to use different
+            subnet masks according to their requirements.
+
+        </p>
+
+
+        <p>
+
+            For example, suppose an organization has:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                IT Department: 30 Hosts
+            </li>
+
+            <li>
+                Sales Department: 10 Hosts
+            </li>
+
+            <li>
+                HR Department: 5 Hosts
+            </li>
+
+        </ul>
+
+
+        <p>
+
+            Instead of giving every department the same size network,
+            VLSM allows IP addresses to be allocated more efficiently.
+
+        </p>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Department
+                </th>
+
+                <th>
+                    Required Hosts
+                </th>
+
+                <th>
+                    CIDR
+                </th>
+
+                <th>
+                    Usable Hosts
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    IT
+                </td>
+
+                <td>
+                    30
+                </td>
+
+                <td>
+                    /27
+                </td>
+
+                <td>
+                    30
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Sales
+                </td>
+
+                <td>
+                    10
+                </td>
+
+                <td>
+                    /28
+                </td>
+
+                <td>
+                    14
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    HR
+                </td>
+
+                <td>
+                    5
+                </td>
+
+                <td>
+                    /29
+                </td>
+
+                <td>
+                    6
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <!-- Subnetting and Security -->
+
+
+        <h2>
+            Subnetting and Cybersecurity
+        </h2>
+
+
+        <p>
+
+            Subnetting is also important for cybersecurity.
+
+            Organizations can use separate subnets for different
+            departments and security zones.
+
+        </p>
+
+
+        <p>
+
+            For example:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                User Network
+            </li>
+
+            <li>
+                Server Network
+            </li>
+
+            <li>
+                Guest Network
+            </li>
+
+            <li>
+                Management Network
+            </li>
+
+        </ul>
+
+
+        <p>
+
+            Firewalls and Access Control Lists can then be used
+            to control traffic between different network segments.
+
+        </p>
+
+
+        <!-- Troubleshooting -->
+
+
+        <h2>
+            Common Subnetting Mistakes
+        </h2>
+
+
+        <ul>
+
+            <li>
+                Assigning the Network Address to a host
+            </li>
+
+            <li>
+                Assigning the Broadcast Address to a host
+            </li>
+
+            <li>
+                Using an incorrect subnet mask
+            </li>
+
+            <li>
+                Calculating the wrong subnet range
+            </li>
+
+            <li>
+                Confusing total addresses with usable hosts
+            </li>
+
+        </ul>
+
+
+        <!-- Conclusion -->
+
+
+        <h2>
+            Conclusion
+        </h2>
+
+
+        <p>
+
+            Subnetting is an essential networking skill.
+
+            It helps divide large networks into smaller,
+            efficient and manageable networks.
+
+        </p>
+
+
+        <p>
+
+            To master subnetting, practice calculating:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Network Address
+            </li>
+
+            <li>
+                Broadcast Address
+            </li>
+
+            <li>
+                Usable Host Range
+            </li>
+
+            <li>
+                Number of Subnets
+            </li>
+
+            <li>
+                Number of Usable Hosts
+            </li>
+
+        </ul>
+
+
+        <!-- Related Articles -->
+
+
+        <h2>
+            Related Networking Topics
+        </h2>
+
+
+        <p>
+
+            To understand IP addresses, IPv4, IPv6, CIDR
+            and subnet masks, read our complete guide on
+
+            <a href="ip-addressing.html">
+                IP Addressing
+            </a>.
+
+        </p>
+
+
+        <p>
+
+            To understand how devices communicate across
+            different layers, read our guide on the
+
+            <a href="tcp-ip-model.html">
+                TCP/IP Model
+            </a>.
+
+        </p>
+
+
+        <p>
+
+            To learn how networking communication is divided
+            into seven layers, read our complete guide on the
+
+            <a href="osi-model.html">
+                OSI Model
+            </a>.
+
+        </p>
+
+
+        <p>
+
+            To learn how different departments can be separated
+            into logical networks, read our guide on
+
+            <a href="vlan.html">
+                VLANs
+            </a>.
+
+        </p>
+
+
+    </main>
+
+
+    <!-- Footer -->
+
+
+    <footer>
+
+
+        <h3>
+            🛡️ Cybersecurity Hub
+        </h3>
+
+
+        <p>
+            Learn Cybersecurity.
+            Build Your Future.
+        </p>
+
+
+        <p class="copyright">
+            © 2026 Cybersecurity Hub.
+            All Rights Reserved.
+        </p>
+
+
+    </footer>
+
+
+</body>
+
+</html>

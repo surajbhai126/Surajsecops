@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TCP vs UDP: Complete Guide | Cybersecurity Hub</title>
+
+    <meta name="description"
+          content="Learn TCP and UDP in detail, including TCP three-way handshake, TCP flags, four-way termination, differences, common protocols and cybersecurity importance.">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🛡️ Cybersecurity Hub
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="cybersecurity.html">Cybersecurity</a>
+
+            <a href="networking.html">Networking</a>
+
+            <a href="vapt.html">VAPT</a>
+
+            <a href="tools.html">Tools</a>
+
+        </div>
+
+    </nav>
+
+
+    <main class="article">
+
+
+        <h1>
+            TCP vs UDP: Complete Beginner Guide
+        </h1>
+
+
+        <p class="date">
+            Learn Transport Layer Protocols from Beginner to Advanced
+        </p>
+
+
+        <p>
+
+            TCP and UDP are two important Transport Layer protocols
+            used for communication across computer networks.
+
+        </p>
+
+
+        <p>
+
+            They are responsible for delivering data between
+            applications running on different devices.
+
+        </p>
+
+
+        <h2>
+            What is TCP?
+        </h2>
+
+
+        <p>
+
+            TCP stands for Transmission Control Protocol.
+
+            It is a connection-oriented and reliable protocol.
+
+        </p>
+
+
+        <p>
+
+            TCP ensures that data is delivered correctly,
+            in the correct order and without unnecessary duplication.
+
+        </p>
+
+
+        <h3>
+            Important Features of TCP
+        </h3>
+
+
+        <ul>
+
+            <li>
+                Connection-oriented
+            </li>
+
+            <li>
+                Reliable data delivery
+            </li>
+
+            <li>
+                Ordered data transmission
+            </li>
+
+            <li>
+                Error detection
+            </li>
+
+            <li>
+                Flow control
+            </li>
+
+            <li>
+                Congestion control
+            </li>
+
+        </ul>
+
+
+        <h2>
+            TCP Three-Way Handshake
+        </h2>
+
+
+        <p>
+
+            Before transferring data, TCP establishes a connection
+            between the client and server.
+
+        </p>
+
+
+        <p>
+
+            This process is called the
+            <strong>TCP Three-Way Handshake</strong>.
+
+        </p>
+
+
+        <h3>
+            Step 1: SYN
+        </h3>
+
+
+        <p>
+
+            The client sends a SYN packet to the server
+            to request a connection.
+
+        </p>
+
+
+        <h3>
+            Step 2: SYN-ACK
+        </h3>
+
+
+        <p>
+
+            The server responds with SYN-ACK.
+
+            This confirms that the server received the request
+            and is ready for communication.
+
+        </p>
+
+
+        <h3>
+            Step 3: ACK
+        </h3>
+
+
+        <p>
+
+            The client sends an ACK packet.
+
+            The TCP connection is now established.
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                SYN → SYN-ACK → ACK
+            </strong>
+
+        </p>
+
+
+        <h2>
+            TCP Flags
+        </h2>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Flag
+                </th>
+
+                <th>
+                    Purpose
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    SYN
+                </td>
+
+                <td>
+                    Starts a TCP connection
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    ACK
+                </td>
+
+                <td>
+                    Acknowledges received data
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    FIN
+                </td>
+
+                <td>
+                    Gracefully terminates a connection
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    RST
+                </td>
+
+                <td>
+                    Resets a connection
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    PSH
+                </td>
+
+                <td>
+                    Pushes data to the application
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    URG
+                </td>
+
+                <td>
+                    Indicates urgent data
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <h2>
+            TCP Four-Way Connection Termination
+        </h2>
+
+
+        <p>
+
+            TCP generally uses a four-step process
+            to gracefully close a connection.
+
+        </p>
+
+
+        <ol>
+
+            <li>
+                FIN
+            </li>
+
+            <li>
+                ACK
+            </li>
+
+            <li>
+                FIN
+            </li>
+
+            <li>
+                ACK
+            </li>
+
+        </ol>
+
+
+        <p>
+
+            This allows both sides to properly finish
+            their communication.
+
+        </p>
+
+
+        <h2>
+            What is UDP?
+        </h2>
+
+
+        <p>
+
+            UDP stands for User Datagram Protocol.
+
+            It is a connectionless Transport Layer protocol.
+
+        </p>
+
+
+        <p>
+
+            UDP does not establish a connection before
+            sending data.
+
+        </p>
+
+
+        <h3>
+            Important Features of UDP
+        </h3>
+
+
+        <ul>
+
+            <li>
+                Connectionless
+            </li>
+
+            <li>
+                Faster communication
+            </li>
+
+            <li>
+                Low overhead
+            </li>
+
+            <li>
+                No guaranteed delivery
+            </li>
+
+            <li>
+                No guaranteed ordering
+            </li>
+
+        </ul>
+
+
+        <h2>
+            TCP vs UDP Comparison
+        </h2>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    TCP
+                </th>
+
+                <th>
+                    UDP
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Connection-oriented
+                </td>
+
+                <td>
+                    Connectionless
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Reliable
+                </td>
+
+                <td>
+                    No delivery guarantee
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Slower
+                </td>
+
+                <td>
+                    Faster
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Uses acknowledgements
+                </td>
+
+                <td>
+                    No acknowledgements
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Maintains data order
+                </td>
+
+                <td>
+                    Data order is not guaranteed
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Higher overhead
+                </td>
+
+                <td>
+                    Lower overhead
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <h2>
+            Common TCP Protocols
+        </h2>
+
+
+        <ul>
+
+            <li>
+                HTTP
+            </li>
+
+            <li>
+                HTTPS
+            </li>
+
+            <li>
+                FTP
+            </li>
+
+            <li>
+                SSH
+            </li>
+
+            <li>
+                Telnet
+            </li>
+
+            <li>
+                SMTP
+            </li>
+
+        </ul>
+
+
+        <h2>
+            Common UDP Protocols
+        </h2>
+
+
+        <ul>
+
+            <li>
+                DNS
+            </li>
+
+            <li>
+                DHCP
+            </li>
+
+            <li>
+                TFTP
+            </li>
+
+            <li>
+                SNMP
+            </li>
+
+            <li>
+                VoIP
+            </li>
+
+        </ul>
+
+
+        <h2>
+            Real-World Examples
+        </h2>
+
+
+        <h3>
+            TCP Example
+        </h3>
+
+
+        <p>
+
+            When downloading a file, data accuracy is important.
+
+            Missing data can corrupt the file.
+
+            Therefore, TCP is suitable for reliable file transfers.
+
+        </p>
+
+
+        <h3>
+            UDP Example
+        </h3>
+
+
+        <p>
+
+            In online gaming or live video communication,
+            speed is often more important than perfect delivery.
+
+        </p>
+
+
+        <p>
+
+            Therefore, UDP can be useful for real-time communication.
+
+        </p>
+
+
+        <h2>
+            TCP and UDP in Cybersecurity
+        </h2>
+
+
+        <p>
+
+            Cybersecurity professionals analyze TCP and UDP traffic
+            during network monitoring and security investigations.
+
+        </p>
+
+
+        <p>
+
+            Understanding TCP and UDP helps security professionals
+            identify unusual ports, suspicious connections and
+            abnormal network traffic.
+
+        </p>
+
+
+        <h2>
+            TCP SYN Flood Attack
+        </h2>
+
+
+        <p>
+
+            A SYN Flood is a type of Denial-of-Service attack
+            that abuses the TCP connection establishment process.
+
+        </p>
+
+
+        <p>
+
+            Security professionals use network monitoring and
+            protective controls to detect and mitigate such attacks.
+
+        </p>
+
+
+        <h2>
+            How to Identify TCP and UDP Traffic
+        </h2>
+
+
+        <p>
+
+            Network analysis tools can be used to examine
+            TCP and UDP traffic.
+
+        </p>
+
+
+        <p>
+
+            Common tools include:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Wireshark
+            </li>
+
+            <li>
+                tcpdump
+            </li>
+
+            <li>
+                Nmap
+            </li>
+
+        </ul>
+
+
+        <h2>
+            Interview Questions
+        </h2>
+
+
+        <ol>
+
+            <li>
+                What is the difference between TCP and UDP?
+            </li>
+
+            <li>
+                Explain the TCP Three-Way Handshake.
+            </li>
+
+            <li>
+                What are TCP flags?
+            </li>
+
+            <li>
+                What is a SYN Flood attack?
+            </li>
+
+            <li>
+                Why is UDP faster than TCP?
+            </li>
+
+            <li>
+                Which protocol does DNS commonly use?
+            </li>
+
+            <li>
+                What is the difference between connection-oriented
+                and connectionless communication?
+            </li>
+
+        </ol>
+
+
+        <h2>
+            Conclusion
+        </h2>
+
+
+        <p>
+
+            TCP provides reliable and ordered communication,
+            while UDP provides faster communication with lower overhead.
+
+        </p>
+
+
+        <p>
+
+            Understanding both protocols is essential for networking,
+            cybersecurity, SOC and penetration testing professionals.
+
+        </p>
+
+
+    </main>
+
+
+    <footer>
+
+        <h3>
+            🛡️ Cybersecurity Hub
+        </h3>
+
+
+        <p>
+            Learn Cybersecurity.
+            Build Your Future.
+        </p>
+
+
+        <p class="copyright">
+            © 2026 Cybersecurity Hub.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

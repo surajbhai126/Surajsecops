@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+
+    <title>
+        IP Addressing Explained: IPv4, IPv6, CIDR & IP Types
+    </title>
+
+    <meta name="description"
+          content="Learn IP addressing from beginner to advanced. Understand IPv4, IPv6, public and private IP addresses, static and dynamic IPs, CIDR, subnet masks, IP classes, NAT, DNS and networking concepts.">
+
+    <meta name="keywords"
+          content="IP addressing, IPv4 explained, IPv6 explained, public IP address, private IP address, static IP, dynamic IP, CIDR, subnet mask, IP classes, default gateway, NAT, DNS, networking">
+
+    <meta name="author"
+          content="Cybersecurity Hub">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <link rel="canonical"
+          href="https://surajbhai126.github.io/Surajsecops/ip-addressing.html">
+
+
+    <!-- Open Graph SEO -->
+
+    <meta property="og:title"
+          content="IP Addressing Explained: IPv4, IPv6, CIDR & IP Types">
+
+    <meta property="og:description"
+          content="Complete guide to IP addressing including IPv4, IPv6, public and private IP addresses, CIDR, subnet masks, NAT, DNS and networking fundamentals.">
+
+    <meta property="og:type"
+          content="article">
+
+    <meta property="og:url"
+          content="https://surajbhai126.github.io/Surajsecops/ip-addressing.html">
+
+
+    <!-- Twitter SEO -->
+
+    <meta name="twitter:card"
+          content="summary">
+
+    <meta name="twitter:title"
+          content="IP Addressing Explained: IPv4, IPv6, CIDR & IP Types">
+
+    <meta name="twitter:description"
+          content="Learn IP addressing, IPv4, IPv6, CIDR, subnet masks, public and private IPs and important networking concepts.">
+
+
+    <!-- Stylesheet -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+
+    <!-- Structured Data -->
+
+    <script type="application/ld+json">
+
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://surajbhai126.github.io/Surajsecops/ip-addressing.html"
+        },
+
+        "headline": "IP Addressing Explained: IPv4, IPv6, CIDR & IP Types",
+
+        "description": "Complete guide to IP addressing including IPv4, IPv6, public and private IP addresses, CIDR, subnet masks, NAT, DNS and networking fundamentals.",
+
+        "author": {
+            "@type": "Organization",
+            "name": "Cybersecurity Hub"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "Cybersecurity Hub"
+        },
+
+        "about": [
+            "IP Addressing",
+            "IPv4",
+            "IPv6",
+            "CIDR",
+            "Subnet Mask",
+            "Networking"
+        ]
+    }
+
+    </script>
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🛡️ Cybersecurity Hub
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="cybersecurity.html">
+                Cybersecurity
+            </a>
+
+            <a href="networking.html">
+                Networking
+            </a>
+
+            <a href="vapt.html">
+                VAPT
+            </a>
+
+            <a href="tools.html">
+                Tools
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main Article -->
+
+    <main class="article">
+
+
+        <h1>
+            IP Addressing Explained: IPv4, IPv6, CIDR & IP Types
+        </h1>
+
+
+        <p class="date">
+            Complete IP Addressing Guide for Networking and Cybersecurity Beginners
+        </p>
+
+
+        <!-- Introduction -->
+
+        <h2>
+            What is an IP Address?
+        </h2>
+
+
+        <p>
+
+            An IP address is a unique logical address assigned
+            to a device connected to a network.
+
+        </p>
+
+
+        <p>
+
+            IP stands for
+            <strong>Internet Protocol</strong>.
+
+            It allows devices to identify and communicate
+            with each other over a network.
+
+        </p>
+
+
+        <p>
+
+            Just as a house needs a postal address to receive
+            letters, a device needs an IP address to send and
+            receive network data.
+
+        </p>
+
+
+        <h3>
+            Example of an IP Address
+        </h3>
+
+
+        <p>
+
+            <strong>
+                192.168.1.10
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            When one device communicates with another device,
+            IP addresses help identify the source and destination
+            of network traffic.
+
+        </p>
+
+
+        <!-- Why IP Address -->
+
+        <h2>
+            Why are IP Addresses Important?
+        </h2>
+
+
+        <p>
+
+            IP addresses are essential for communication
+            between devices on a network.
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Identify devices on a network
+            </li>
+
+            <li>
+                Allow communication between devices
+            </li>
+
+            <li>
+                Help routers forward packets
+            </li>
+
+            <li>
+                Identify source and destination devices
+            </li>
+
+            <li>
+                Help network administrators manage networks
+            </li>
+
+            <li>
+                Help security professionals analyze network traffic
+            </li>
+
+        </ul>
+
+
+        <!-- IPv4 -->
+
+        <h2>
+            What is IPv4?
+        </h2>
+
+
+        <p>
+
+            IPv4 stands for
+            <strong>Internet Protocol Version 4</strong>.
+
+        </p>
+
+
+        <p>
+
+            IPv4 uses a
+            <strong>32-bit address</strong>.
+
+            It is divided into four 8-bit sections called octets.
+
+        </p>
+
+
+        <h3>
+            IPv4 Example
+        </h3>
+
+
+        <p>
+
+            <strong>
+                192.168.1.10
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Each octet can contain a value from
+            <strong>0 to 255</strong>.
+
+        </p>
+
+
+        <h3>
+            IPv4 Address Structure
+        </h3>
+
+
+        <p>
+
+            <strong>
+                192 . 168 . 1 . 10
+            </strong>
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                192 = First Octet
+            </li>
+
+            <li>
+                168 = Second Octet
+            </li>
+
+            <li>
+                1 = Third Octet
+            </li>
+
+            <li>
+                10 = Fourth Octet
+            </li>
+
+        </ul>
+
+
+        <!-- IPv6 -->
+
+        <h2>
+            What is IPv6?
+        </h2>
+
+
+        <p>
+
+            IPv6 stands for
+            <strong>Internet Protocol Version 6</strong>.
+
+        </p>
+
+
+        <p>
+
+            IPv6 was developed because the number of available
+            IPv4 addresses is limited.
+
+        </p>
+
+
+        <p>
+
+            IPv6 uses a
+            <strong>128-bit address</strong>.
+
+        </p>
+
+
+        <h3>
+            IPv6 Example
+        </h3>
+
+
+        <p>
+
+            <strong>
+                2001:0db8:85a3:0000:0000:8a2e:0370:7334
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            IPv6 addresses use hexadecimal numbers separated
+            by colons.
+
+        </p>
+
+
+        <h3>
+            IPv4 vs IPv6
+        </h3>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    IPv4
+                </th>
+
+                <th>
+                    IPv6
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    32-bit address
+                </td>
+
+                <td>
+                    128-bit address
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Example: 192.168.1.1
+                </td>
+
+                <td>
+                    Example: 2001:db8::1
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Decimal format
+                </td>
+
+                <td>
+                    Hexadecimal format
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Limited address space
+                </td>
+
+                <td>
+                    Very large address space
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <!-- Public IP -->
+
+        <h2>
+            What is a Public IP Address?
+        </h2>
+
+
+        <p>
+
+            A Public IP address is an IP address that can be
+            reachable over the Internet.
+
+        </p>
+
+
+        <p>
+
+            Internet Service Providers assign public IP addresses
+            to homes, businesses and organizations.
+
+        </p>
+
+
+        <p>
+
+            Public IP addresses must be globally unique.
+
+        </p>
+
+
+        <!-- Private IP -->
+
+        <h2>
+            What is a Private IP Address?
+        </h2>
+
+
+        <p>
+
+            A Private IP address is used inside local networks
+            such as homes, offices and organizations.
+
+        </p>
+
+
+        <p>
+
+            Private IP addresses are not directly routable
+            over the public Internet.
+
+        </p>
+
+
+        <h3>
+            Private IPv4 Address Ranges
+        </h3>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Range
+                </th>
+
+                <th>
+                    CIDR
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    10.0.0.0 - 10.255.255.255
+                </td>
+
+                <td>
+                    10.0.0.0/8
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    172.16.0.0 - 172.31.255.255
+                </td>
+
+                <td>
+                    172.16.0.0/12
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    192.168.0.0 - 192.168.255.255
+                </td>
+
+                <td>
+                    192.168.0.0/16
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <!-- Static IP -->
+
+        <h2>
+            What is a Static IP Address?
+        </h2>
+
+
+        <p>
+
+            A Static IP address remains fixed and does not
+            normally change automatically.
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Servers
+            </li>
+
+            <li>
+                Network devices
+            </li>
+
+            <li>
+                CCTV systems
+            </li>
+
+            <li>
+                Web hosting
+            </li>
+
+            <li>
+                Remote access systems
+            </li>
+
+        </ul>
+
+
+        <!-- Dynamic IP -->
+
+        <h2>
+            What is a Dynamic IP Address?
+        </h2>
+
+
+        <p>
+
+            A Dynamic IP address is automatically assigned
+            to a device.
+
+        </p>
+
+
+        <p>
+
+            DHCP is commonly used to automatically assign
+            IP addresses to devices.
+
+        </p>
+
+
+        <p>
+
+            Dynamic IP addresses may change over time.
+
+        </p>
+
+
+        <!-- Network and Host -->
+
+        <h2>
+            Network ID and Host ID
+        </h2>
+
+
+        <p>
+
+            An IP address contains two important parts:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                <strong>Network ID:</strong>
+                Identifies the network.
+            </li>
+
+            <li>
+                <strong>Host ID:</strong>
+                Identifies a device inside the network.
+            </li>
+
+        </ul>
+
+
+        <!-- Subnet Mask -->
+
+        <h2>
+            What is a Subnet Mask?
+        </h2>
+
+
+        <p>
+
+            A subnet mask is used to separate the network portion
+            and host portion of an IP address.
+
+        </p>
+
+
+        <p>
+
+            Example:
+
+            <strong>
+                192.168.1.10
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Subnet Mask:
+
+            <strong>
+                255.255.255.0
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            This commonly represents the network:
+
+            <strong>
+                192.168.1.0/24
+            </strong>
+
+        </p>
+
+
+        <!-- CIDR -->
+
+        <h2>
+            What is CIDR?
+        </h2>
+
+
+        <p>
+
+            CIDR stands for
+            <strong>Classless Inter-Domain Routing</strong>.
+
+        </p>
+
+
+        <p>
+
+            CIDR notation represents the number of network bits
+            in an IP address.
+
+        </p>
+
+
+        <p>
+
+            Example:
+
+            <strong>
+                192.168.1.0/24
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            The number
+            <strong>/24</strong>
+            means that the first 24 bits represent
+            the network portion.
+
+        </p>
+
+
+        <p>
+
+            CIDR is very important for subnetting and efficient
+            IP address allocation.
+
+        </p>
+
+
+        <!-- IP Classes -->
+
+        <h2>
+            IPv4 Address Classes
+        </h2>
+
+
+        <p>
+
+            Traditional IPv4 addressing divided IP addresses
+            into different classes.
+
+        </p>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Class
+                </th>
+
+                <th>
+                    Range
+                </th>
+
+                <th>
+                    Usage
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Class A
+                </td>
+
+                <td>
+                    1.0.0.0 - 126.255.255.255
+                </td>
+
+                <td>
+                    Very large networks
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Class B
+                </td>
+
+                <td>
+                    128.0.0.0 - 191.255.255.255
+                </td>
+
+                <td>
+                    Medium-sized networks
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Class C
+                </td>
+
+                <td>
+                    192.0.0.0 - 223.255.255.255
+                </td>
+
+                <td>
+                    Small networks
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Class D
+                </td>
+
+                <td>
+                    224.0.0.0 - 239.255.255.255
+                </td>
+
+                <td>
+                    Multicast
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Class E
+                </td>
+
+                <td>
+                    240.0.0.0 - 255.255.255.255
+                </td>
+
+                <td>
+                    Experimental
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <p>
+
+            Modern networks primarily use CIDR instead of
+            traditional class-based addressing.
+
+        </p>
+
+
+        <!-- Special Addresses -->
+
+        <h2>
+            Special IP Addresses
+        </h2>
+
+
+        <h3>
+            Loopback Address
+        </h3>
+
+
+        <p>
+
+            The IPv4 loopback address is:
+
+            <strong>
+                127.0.0.1
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            It is commonly known as:
+
+            <strong>
+                localhost
+            </strong>
+
+        </p>
+
+
+        <h3>
+            APIPA Address
+        </h3>
+
+
+        <p>
+
+            APIPA stands for
+            <strong>Automatic Private IP Addressing</strong>.
+
+        </p>
+
+
+        <p>
+
+            If a device cannot receive an IP address from
+            a DHCP server, it may automatically assign itself
+            an address in the range:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                169.254.0.0 - 169.254.255.255
+            </strong>
+
+        </p>
+
+
+        <!-- Communication -->
+
+        <h2>
+            Types of IP Communication
+        </h2>
+
+
+        <h3>
+            Unicast
+        </h3>
+
+
+        <p>
+            One sender communicates with one receiver.
+        </p>
+
+
+        <h3>
+            Broadcast
+        </h3>
+
+
+        <p>
+            One sender communicates with all devices
+            on the local network.
+        </p>
+
+
+        <h3>
+            Multicast
+        </h3>
+
+
+        <p>
+            One sender communicates with a specific group
+            of receivers.
+        </p>
+
+
+        <h3>
+            Anycast
+        </h3>
+
+
+        <p>
+            Data is sent to the nearest or best available
+            device from a group of devices.
+        </p>
+
+
+        <!-- Default Gateway -->
+
+        <h2>
+            What is a Default Gateway?
+        </h2>
+
+
+        <p>
+
+            A Default Gateway is the device that forwards
+            traffic from a local network to another network.
+
+        </p>
+
+
+        <p>
+
+            In most home networks, the router acts as
+            the default gateway.
+
+        </p>
+
+
+        <p>
+
+            Example:
+
+            <strong>
+                192.168.1.1
+            </strong>
+
+        </p>
+
+
+        <!-- DNS -->
+
+        <h2>
+            IP Address and DNS
+        </h2>
+
+
+        <p>
+
+            DNS translates domain names into IP addresses.
+
+        </p>
+
+
+        <p>
+
+            Example:
+
+            <strong>
+                example.com → IP Address
+            </strong>
+
+        </p>
+
+
+        <!-- NAT -->
+
+        <h2>
+            What is NAT?
+        </h2>
+
+
+        <p>
+
+            NAT stands for
+            <strong>Network Address Translation</strong>.
+
+        </p>
+
+
+        <p>
+
+            NAT allows multiple private devices to share
+            a public IP address when accessing the Internet.
+
+        </p>
+
+
+        <!-- Cybersecurity -->
+
+        <h2>
+            IP Addressing and Cybersecurity
+        </h2>
+
+
+        <p>
+
+            Understanding IP addressing is extremely important
+            for cybersecurity professionals.
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                IP address scanning
+            </li>
+
+            <li>
+                IP spoofing
+            </li>
+
+            <li>
+                Network reconnaissance
+            </li>
+
+            <li>
+                Firewall rules
+            </li>
+
+            <li>
+                Access Control Lists
+            </li>
+
+            <li>
+                Network monitoring
+            </li>
+
+            <li>
+                Intrusion detection
+            </li>
+
+        </ul>
+
+
+        <!-- Troubleshooting -->
+
+        <h2>
+            IP Address Troubleshooting
+        </h2>
+
+
+        <ul>
+
+            <li>
+                Incorrect IP address
+            </li>
+
+            <li>
+                Incorrect subnet mask
+            </li>
+
+            <li>
+                Incorrect default gateway
+            </li>
+
+            <li>
+                DHCP server failure
+            </li>
+
+            <li>
+                IP address conflict
+            </li>
+
+            <li>
+                DNS configuration problems
+            </li>
+
+        </ul>
+
+
+        <h3>
+            Useful IP Address Commands
+        </h3>
+
+
+        <p>
+
+            Windows:
+
+            <strong>
+                ipconfig
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Linux:
+
+            <strong>
+                ip addr
+            </strong>
+
+        </p>
+
+
+        <!-- Conclusion -->
+
+        <h2>
+            Conclusion
+        </h2>
+
+
+        <p>
+
+            IP addressing is one of the most important
+            fundamentals of computer networking.
+
+        </p>
+
+
+        <p>
+
+            A strong understanding of IPv4, IPv6, public and
+            private IP addresses, subnet masks, CIDR, gateways
+            and IP communication types is essential for
+            networking and cybersecurity.
+
+        </p>
+
+
+        <!-- Related Topics -->
+
+        <h2>
+            Related Networking Topics
+        </h2>
+
+
+        <p>
+
+            To learn how to divide networks into smaller networks,
+            read our complete guide on
+
+            <a href="subnetting.html">
+                Subnetting
+            </a>.
+
+        </p>
+
+
+        <p>
+
+            To learn how different departments can be separated
+            into logical networks, read our guide on
+
+            <a href="vlan.html">
+                VLANs
+            </a>.
+
+        </p>
+
+
+        <p>
+
+            To understand how devices communicate across different
+            networking layers, read our guide on
+
+            <a href="osi-model.html">
+                OSI Model
+            </a>.
+
+        </p>
+
+
+        <p>
+
+            To learn about networking protocols and communication,
+            read our guide on
+
+            <a href="tcp-ip-model.html">
+                TCP/IP Model
+            </a>.
+
+        </p>
+
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+
+        <h3>
+            🛡️ Cybersecurity Hub
+        </h3>
+
+
+        <p>
+            Learn Cybersecurity.
+            Build Your Future.
+        </p>
+
+
+        <p class="copyright">
+            © 2026 Cybersecurity Hub.
+            All Rights Reserved.
+        </p>
+
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Default Gateway Explained | Cybersecurity Hub</title>
+
+    <meta name="description"
+          content="Learn what a Default Gateway is, how it works, its role in networking, routing, troubleshooting and cybersecurity.">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🛡️ Cybersecurity Hub
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="cybersecurity.html">
+                Cybersecurity
+            </a>
+
+            <a href="networking.html">
+                Networking
+            </a>
+
+            <a href="vapt.html">
+                VAPT
+            </a>
+
+            <a href="tools.html">
+                Tools
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main Article -->
+
+    <main class="article">
+
+
+        <h1>
+            What is a Default Gateway?
+        </h1>
+
+
+        <p class="date">
+            Learn Default Gateway from Beginner to Advanced
+        </p>
+
+
+        <p>
+
+            A Default Gateway is a network device,
+            usually a router, that allows a device to
+            communicate with devices outside its local network.
+
+        </p>
+
+
+        <p>
+
+            In simple words, when a computer wants to communicate
+            with a device that is not present in its own local network,
+            it sends the traffic to the Default Gateway.
+
+        </p>
+
+
+        <h2>
+            Simple Example
+        </h2>
+
+
+        <p>
+
+            Suppose a computer has the following network configuration:
+
+        </p>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Network Configuration
+                </th>
+
+                <th>
+                    Value
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    IP Address
+                </td>
+
+                <td>
+                    192.168.1.10
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Subnet Mask
+                </td>
+
+                <td>
+                    255.255.255.0
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Default Gateway
+                </td>
+
+                <td>
+                    192.168.1.1
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <p>
+
+            In this example, the router interface
+            <strong>192.168.1.1</strong>
+            is the Default Gateway.
+
+        </p>
+
+
+        <h2>
+            Why is a Default Gateway Needed?
+        </h2>
+
+
+        <p>
+
+            A device can directly communicate with devices
+            inside its own local network.
+
+        </p>
+
+
+        <p>
+
+            However, if the destination is located on another network,
+            the device needs a router to forward the traffic.
+
+        </p>
+
+
+        <p>
+
+            The router that performs this function is called
+            the Default Gateway.
+
+        </p>
+
+
+        <h2>
+            How Does a Default Gateway Work?
+        </h2>
+
+
+        <h3>
+            Step 1: Source Device Checks the Destination
+        </h3>
+
+
+        <p>
+
+            The source device checks whether the destination IP address
+            belongs to the same local network.
+
+        </p>
+
+
+        <h3>
+            Step 2: Local Network Communication
+        </h3>
+
+
+        <p>
+
+            If the destination device belongs to the same subnet,
+            the source device communicates directly with it.
+
+        </p>
+
+
+        <p>
+
+            Example:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                192.168.1.10 → 192.168.1.20
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Both devices are in the same network,
+            so communication can happen directly.
+
+        </p>
+
+
+        <h3>
+            Step 3: Remote Network Communication
+        </h3>
+
+
+        <p>
+
+            If the destination belongs to another network,
+            the source device forwards the packet to the Default Gateway.
+
+        </p>
+
+
+        <p>
+
+            Example:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                192.168.1.10 → 8.8.8.8
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Since 8.8.8.8 is outside the local network,
+            the packet is sent to the Default Gateway.
+
+        </p>
+
+
+        <h2>
+            Default Gateway Example
+        </h2>
+
+
+        <p>
+
+            Consider the following network:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                Computer → Switch → Router → Internet
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            The router's local interface may have the IP address:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                192.168.1.1
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            The computer uses this address as its Default Gateway
+            to communicate with external networks.
+
+        </p>
+
+
+        <h2>
+            Default Gateway and Routing
+        </h2>
+
+
+        <p>
+
+            A Default Gateway is closely related to routing.
+
+        </p>
+
+
+        <p>
+
+            When a device wants to send traffic outside
+            its local network, it forwards the packet
+            to the Default Gateway.
+
+        </p>
+
+
+        <p>
+
+            The router then checks its routing table
+            and determines the best path for the packet.
+
+        </p>
+
+
+        <h2>
+            Default Gateway vs Router
+        </h2>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Default Gateway
+                </th>
+
+
+                <th>
+                    Router
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    The gateway used by a device
+                    to reach other networks.
+                </td>
+
+
+                <td>
+                    A network device that forwards
+                    packets between networks.
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Usually an IP address.
+                </td>
+
+
+                <td>
+                    A physical or virtual network device.
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Example: 192.168.1.1
+                </td>
+
+
+                <td>
+                    Example: Cisco Router.
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <h2>
+            Default Gateway and ARP
+        </h2>
+
+
+        <p>
+
+            Before sending a packet to the Default Gateway,
+            a device needs to know the MAC address
+            of the gateway.
+
+        </p>
+
+
+        <p>
+
+            If the MAC address is not already present
+            in the ARP cache, the device sends an ARP Request.
+
+        </p>
+
+
+        <p>
+
+            Example:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                Who has 192.168.1.1?
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            The router replies with its MAC address.
+
+        </p>
+
+
+        <p>
+
+            The device can then send the network frame
+            to the router.
+
+        </p>
+
+
+        <h2>
+            What Happens if the Default Gateway is Incorrect?
+        </h2>
+
+
+        <p>
+
+            If the Default Gateway is incorrectly configured,
+            the device may be able to communicate with devices
+            in the local network but may not be able to access
+            remote networks or the Internet.
+
+        </p>
+
+
+        <p>
+
+            For example:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Local network communication may work.
+            </li>
+
+
+            <li>
+                Internet access may fail.
+            </li>
+
+
+            <li>
+                Remote network communication may fail.
+            </li>
+
+
+            <li>
+                Routing may not work correctly.
+            </li>
+
+        </ul>
+
+
+        <h2>
+            How to Check the Default Gateway
+        </h2>
+
+
+        <h3>
+            Windows
+        </h3>
+
+
+        <p>
+
+            Open Command Prompt and use:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                ipconfig
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Look for:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                Default Gateway
+            </strong>
+
+        </p>
+
+
+        <h3>
+            Linux
+        </h3>
+
+
+        <p>
+
+            Use:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                ip route
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Example output:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                default via 192.168.1.1
+            </strong>
+
+        </p>
+
+
+        <h2>
+            Default Gateway and the OSI Model
+        </h2>
+
+
+        <p>
+
+            A Default Gateway primarily works at the
+            Network Layer of the OSI Model.
+
+        </p>
+
+
+        <p>
+
+            Routers use IP addresses and routing tables
+            to forward packets between different networks.
+
+        </p>
+
+
+        <h2>
+            Default Gateway in Cybersecurity
+        </h2>
+
+
+        <p>
+
+            Understanding the Default Gateway is important
+            for cybersecurity professionals.
+
+        </p>
+
+
+        <p>
+
+            Security analysts may analyze traffic flowing
+            through a gateway to detect suspicious activity.
+
+        </p>
+
+
+        <p>
+
+            Firewalls and security gateways can also control
+            traffic entering or leaving a network.
+
+        </p>
+
+
+        <h2>
+            Default Gateway Interview Questions
+        </h2>
+
+
+        <ol>
+
+            <li>
+                What is a Default Gateway?
+            </li>
+
+
+            <li>
+                Why is a Default Gateway required?
+            </li>
+
+
+            <li>
+                What happens if the Default Gateway is incorrect?
+            </li>
+
+
+            <li>
+                What is the difference between a Router and a Default Gateway?
+            </li>
+
+
+            <li>
+                How does ARP help communicate with the Default Gateway?
+            </li>
+
+
+            <li>
+                How can you check the Default Gateway in Windows?
+            </li>
+
+
+            <li>
+                How can you check the Default Gateway in Linux?
+            </li>
+
+        </ol>
+
+
+        <h2>
+            Conclusion
+        </h2>
+
+
+        <p>
+
+            A Default Gateway is the device used to forward
+            traffic from a local network to other networks.
+
+        </p>
+
+
+        <p>
+
+            In most networks, the Default Gateway is a router
+            interface that provides connectivity to external networks
+            and the Internet.
+
+        </p>
+
+
+        <p>
+
+            Understanding the Default Gateway is essential
+            for networking, troubleshooting and cybersecurity.
+
+        </p>
+
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>
+            🛡️ Cybersecurity Hub
+        </h3>
+
+
+        <p>
+            Learn Cybersecurity.
+            Build Your Future.
+        </p>
+
+
+        <p class="copyright">
+            © 2026 Cybersecurity Hub.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+
+    <title>
+        TCP/IP Model Explained: 4 Layers, Protocols & OSI Comparison
+    </title>
+
+
+    <meta name="description"
+          content="Learn the TCP/IP Model in detail. Understand its 4 layers, protocols, TCP vs UDP, encapsulation, OSI vs TCP/IP comparison and networking fundamentals.">
+
+
+    <meta name="keywords"
+          content="TCP/IP Model, TCP IP Model explained, TCP/IP layers, TCP vs UDP, OSI vs TCP/IP, networking fundamentals, TCP IP protocols">
+
+
+    <meta name="author"
+          content="Cybersecurity Hub">
+
+
+    <meta name="robots"
+          content="index, follow">
+
+
+    <!-- Canonical URL -->
+
+    <link rel="canonical"
+          href="https://surajbhai126.github.io/Surajsecops/tcp-ip-model.html">
+
+
+    <!-- Stylesheet -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+
+    <!-- Open Graph SEO -->
+
+    <meta property="og:title"
+          content="TCP/IP Model Explained: 4 Layers, Protocols & OSI Comparison">
+
+
+    <meta property="og:description"
+          content="Complete beginner-friendly guide to the TCP/IP Model, its 4 layers, protocols, encapsulation and comparison with the OSI Model.">
+
+
+    <meta property="og:type"
+          content="article">
+
+
+    <meta property="og:url"
+          content="https://surajbhai126.github.io/Surajsecops/tcp-ip-model.html">
+
+
+    <meta property="og:site_name"
+          content="Cybersecurity Hub">
+
+
+    <!-- Google Search Console Verification -->
+
+    <meta name="google-site-verification"
+          content="PkU9d2lGSRB9QFqp-Ijw364TvfhN3-cQ0Ke_-PJY13Y">
+
+</head>
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🛡️ Cybersecurity Hub
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+
+            <a href="cybersecurity.html">
+                Cybersecurity
+            </a>
+
+
+            <a href="networking.html">
+                Networking
+            </a>
+
+
+            <a href="vapt.html">
+                VAPT
+            </a>
+
+
+            <a href="tools.html">
+                Tools
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main Article -->
+
+    <main class="article">
+
+
+        <h1>
+            TCP/IP Model Explained: Complete Guide for Beginners
+        </h1>
+
+
+        <p class="date">
+            Learn the TCP/IP Model from Beginner to Advanced
+        </p>
+
+
+        <!-- Introduction -->
+
+        <h2>
+            What is the TCP/IP Model?
+        </h2>
+
+
+        <p>
+
+            The TCP/IP Model is a networking framework used to
+            explain how devices communicate with each other over
+            a network such as the Internet.
+
+        </p>
+
+
+        <p>
+
+            TCP/IP stands for
+            <strong>Transmission Control Protocol / Internet Protocol</strong>.
+
+            It is the practical networking model used by the
+            modern Internet and most computer networks.
+
+        </p>
+
+
+        <p>
+
+            When you open a website, send an email, watch a video
+            or access a server, multiple protocols work together
+            through the TCP/IP Model.
+
+        </p>
+
+
+        <!-- Why TCP IP -->
+
+        <h2>
+            Why is the TCP/IP Model Important?
+        </h2>
+
+
+        <p>
+
+            The TCP/IP Model helps us understand how data travels
+            from one device to another across a network.
+
+        </p>
+
+
+        <p>
+
+            It divides the communication process into different
+            layers. Each layer performs a specific function.
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Helps understand network communication
+            </li>
+
+
+            <li>
+                Defines how different devices communicate
+            </li>
+
+
+            <li>
+                Provides a standard for network protocols
+            </li>
+
+
+            <li>
+                Forms the foundation of the Internet
+            </li>
+
+
+            <li>
+                Helps troubleshoot network problems
+            </li>
+
+
+            <li>
+                Is important for cybersecurity professionals
+            </li>
+
+        </ul>
+
+
+        <!-- Four Layers -->
+
+        <h2>
+            Layers of the TCP/IP Model
+        </h2>
+
+
+        <p>
+
+            The TCP/IP Model consists of four main layers:
+
+        </p>
+
+
+        <ol>
+
+            <li>
+                <strong>Application Layer</strong>
+            </li>
+
+
+            <li>
+                <strong>Transport Layer</strong>
+            </li>
+
+
+            <li>
+                <strong>Internet Layer</strong>
+            </li>
+
+
+            <li>
+                <strong>Network Access Layer</strong>
+            </li>
+
+        </ol>
+
+
+        <!-- Layer Table -->
+
+        <h2>
+            TCP/IP Model Layers Overview
+        </h2>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Layer
+                </th>
+
+
+                <th>
+                    Main Function
+                </th>
+
+
+                <th>
+                    Examples
+                </th>
+
+
+                <th>
+                    Data Unit
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Application
+                </td>
+
+
+                <td>
+                    Provides network services to applications
+                </td>
+
+
+                <td>
+                    HTTP, DNS, FTP, SMTP, SSH
+                </td>
+
+
+                <td>
+                    Data
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Transport
+                </td>
+
+
+                <td>
+                    Provides end-to-end communication
+                </td>
+
+
+                <td>
+                    TCP, UDP
+                </td>
+
+
+                <td>
+                    Segment / Datagram
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Internet
+                </td>
+
+
+                <td>
+                    Provides logical addressing and routing
+                </td>
+
+
+                <td>
+                    IP, ICMP
+                </td>
+
+
+                <td>
+                    Packet
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Network Access
+                </td>
+
+
+                <td>
+                    Transfers data over the physical network
+                </td>
+
+
+                <td>
+                    Ethernet, Wi-Fi, ARP
+                </td>
+
+
+                <td>
+                    Frame
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <!-- Application Layer -->
+
+        <h2>
+            1. Application Layer
+        </h2>
+
+
+        <p>
+
+            The Application Layer is the top layer of the TCP/IP Model.
+
+            It provides network services directly to applications
+            used by users.
+
+        </p>
+
+
+        <p>
+
+            This layer allows applications to communicate over
+            the network using different protocols.
+
+        </p>
+
+
+        <h3>
+            Common Application Layer Protocols
+        </h3>
+
+
+        <ul>
+
+            <li>
+                <strong>HTTP:</strong>
+                Used for web communication.
+            </li>
+
+
+            <li>
+                <strong>HTTPS:</strong>
+                Secure version of HTTP using encryption.
+            </li>
+
+
+            <li>
+                <strong>DNS:</strong>
+                Converts domain names into IP addresses.
+            </li>
+
+
+            <li>
+                <strong>FTP:</strong>
+                Used for file transfer.
+            </li>
+
+
+            <li>
+                <strong>SMTP:</strong>
+                Used for sending emails.
+            </li>
+
+
+            <li>
+                <strong>POP3:</strong>
+                Used for receiving emails.
+            </li>
+
+
+            <li>
+                <strong>IMAP:</strong>
+                Used for accessing emails from a mail server.
+            </li>
+
+
+            <li>
+                <strong>SSH:</strong>
+                Provides secure remote access to systems.
+            </li>
+
+
+            <li>
+                <strong>DHCP:</strong>
+                Automatically assigns network configuration.
+            </li>
+
+        </ul>
+
+
+        <h3>
+            Example of Application Layer
+        </h3>
+
+
+        <p>
+
+            When you type a website address into your browser,
+            protocols such as HTTP or HTTPS are used at the
+            Application Layer.
+
+        </p>
+
+
+        <!-- Transport Layer -->
+
+        <h2>
+            2. Transport Layer
+        </h2>
+
+
+        <p>
+
+            The Transport Layer provides end-to-end communication
+            between applications running on different devices.
+
+        </p>
+
+
+        <p>
+
+            The two most important Transport Layer protocols are
+            TCP and UDP.
+
+        </p>
+
+
+        <h3>
+            TCP - Transmission Control Protocol
+        </h3>
+
+
+        <p>
+
+            TCP is a connection-oriented and reliable protocol.
+
+            Before sending data, TCP establishes a connection
+            between the sender and receiver.
+
+        </p>
+
+
+        <h4>
+            Features of TCP
+        </h4>
+
+
+        <ul>
+
+            <li>
+                Connection-oriented
+            </li>
+
+
+            <li>
+                Reliable data delivery
+            </li>
+
+
+            <li>
+                Error detection
+            </li>
+
+
+            <li>
+                Flow control
+            </li>
+
+
+            <li>
+                Sequence numbers
+            </li>
+
+
+            <li>
+                Acknowledgements
+            </li>
+
+
+            <li>
+                Retransmission of lost data
+            </li>
+
+        </ul>
+
+
+        <h3>
+            UDP - User Datagram Protocol
+        </h3>
+
+
+        <p>
+
+            UDP is a connectionless protocol.
+
+            It sends data without establishing a connection
+            or waiting for acknowledgements.
+
+        </p>
+
+
+        <p>
+
+            UDP is faster than TCP but does not guarantee
+            reliable delivery.
+
+        </p>
+
+
+        <h4>
+            Common Uses of UDP
+        </h4>
+
+
+        <ul>
+
+            <li>
+                Video streaming
+            </li>
+
+
+            <li>
+                Online gaming
+            </li>
+
+
+            <li>
+                DNS queries
+            </li>
+
+
+            <li>
+                Voice calls
+            </li>
+
+
+            <li>
+                Real-time communication
+            </li>
+
+        </ul>
+
+
+        <!-- Port Numbers -->
+
+        <h2>
+            Port Numbers
+        </h2>
+
+
+        <p>
+
+            The Transport Layer uses port numbers to identify
+            specific applications and services running on a device.
+
+        </p>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Protocol
+                </th>
+
+
+                <th>
+                    Port
+                </th>
+
+
+                <th>
+                    Purpose
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    HTTP
+                </td>
+
+
+                <td>
+                    80
+                </td>
+
+
+                <td>
+                    Web Traffic
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    HTTPS
+                </td>
+
+
+                <td>
+                    443
+                </td>
+
+
+                <td>
+                    Secure Web Traffic
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    SSH
+                </td>
+
+
+                <td>
+                    22
+                </td>
+
+
+                <td>
+                    Secure Remote Access
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    DNS
+                </td>
+
+
+                <td>
+                    53
+                </td>
+
+
+                <td>
+                    Domain Name Resolution
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    FTP
+                </td>
+
+
+                <td>
+                    21
+                </td>
+
+
+                <td>
+                    File Transfer
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    SMTP
+                </td>
+
+
+                <td>
+                    25
+                </td>
+
+
+                <td>
+                    Email Transfer
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <!-- Internet Layer -->
+
+        <h2>
+            3. Internet Layer
+        </h2>
+
+
+        <p>
+
+            The Internet Layer is responsible for logical addressing
+            and routing packets between different networks.
+
+        </p>
+
+
+        <p>
+
+            The main protocol used at this layer is IP.
+
+        </p>
+
+
+        <h3>
+            IPv4
+        </h3>
+
+
+        <p>
+
+            IPv4 uses 32-bit addresses.
+
+        </p>
+
+
+        <p>
+
+            Example:
+
+            <strong>
+                192.168.1.10
+            </strong>
+
+        </p>
+
+
+        <h3>
+            IPv6
+        </h3>
+
+
+        <p>
+
+            IPv6 was developed to solve the problem of
+            IPv4 address exhaustion.
+
+        </p>
+
+
+        <p>
+
+            Example:
+
+            <strong>
+                2001:db8::1
+            </strong>
+
+        </p>
+
+
+        <h3>
+            Important Internet Layer Protocols
+        </h3>
+
+
+        <ul>
+
+            <li>
+
+                <strong>IP:</strong>
+
+                Provides logical addressing and routing.
+
+            </li>
+
+
+            <li>
+
+                <strong>ICMP:</strong>
+
+                Used for network diagnostics and error reporting.
+
+            </li>
+
+
+            <li>
+
+                <strong>IPv4:</strong>
+
+                Uses 32-bit addresses.
+
+            </li>
+
+
+            <li>
+
+                <strong>IPv6:</strong>
+
+                Uses 128-bit addresses.
+
+            </li>
+
+        </ul>
+
+
+        <!-- Routing -->
+
+        <h2>
+            Routing in the TCP/IP Model
+        </h2>
+
+
+        <p>
+
+            Routing is the process of selecting the best path
+            for data to travel from the source device to the
+            destination device.
+
+        </p>
+
+
+        <p>
+
+            Routers operate mainly at the Internet Layer and
+            use IP addresses to forward packets.
+
+        </p>
+
+
+        <p>
+
+            For example, when you access a website hosted on
+            another network, routers forward your packets through
+            multiple networks until they reach the destination.
+
+        </p>
+
+
+        <!-- Network Access -->
+
+        <h2>
+            4. Network Access Layer
+        </h2>
+
+
+        <p>
+
+            The Network Access Layer is the lowest layer of
+            the TCP/IP Model.
+
+        </p>
+
+
+        <p>
+
+            It is responsible for transmitting data over the
+            physical network.
+
+        </p>
+
+
+        <p>
+
+            This layer combines the functions of the Physical
+            Layer and Data Link Layer of the OSI Model.
+
+        </p>
+
+
+        <h3>
+            Examples
+        </h3>
+
+
+        <ul>
+
+            <li>
+                Ethernet
+            </li>
+
+
+            <li>
+                Wi-Fi
+            </li>
+
+
+            <li>
+                MAC Addresses
+            </li>
+
+
+            <li>
+                Network Interface Cards
+            </li>
+
+
+            <li>
+                Cables
+            </li>
+
+
+            <li>
+                Wireless Signals
+            </li>
+
+        </ul>
+
+
+        <!-- Encapsulation -->
+
+        <h2>
+            What is Encapsulation?
+        </h2>
+
+
+        <p>
+
+            Encapsulation is the process of adding headers
+            to data as it moves down through the TCP/IP layers.
+
+        </p>
+
+
+        <p>
+
+            When data is sent from an application, each layer
+            adds its own information before sending it to the
+            next layer.
+
+        </p>
+
+
+        <ol>
+
+            <li>
+                Application Layer creates data.
+            </li>
+
+
+            <li>
+                Transport Layer adds a TCP or UDP header.
+            </li>
+
+
+            <li>
+                Internet Layer adds an IP header.
+            </li>
+
+
+            <li>
+                Network Access Layer creates a frame.
+            </li>
+
+
+            <li>
+                Data is transmitted through the network.
+            </li>
+
+        </ol>
+
+
+        <h3>
+            Data Flow
+        </h3>
+
+
+        <p>
+
+            <strong>
+                Data → Segment → Packet → Frame → Bits
+            </strong>
+
+        </p>
+
+
+        <!-- Decapsulation -->
+
+        <h2>
+            What is Decapsulation?
+        </h2>
+
+
+        <p>
+
+            Decapsulation is the reverse process of encapsulation.
+
+            When data reaches the destination device, headers are
+            removed as the data moves up through the TCP/IP layers.
+
+        </p>
+
+
+        <p>
+
+            The receiving device processes the frame, packet,
+            segment and finally delivers the original data to
+            the correct application.
+
+        </p>
+
+
+        <!-- TCP IP vs OSI -->
+
+        <h2>
+            TCP/IP Model vs OSI Model
+        </h2>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    TCP/IP Model
+                </th>
+
+
+                <th>
+                    OSI Model
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    4 Layers
+                </td>
+
+
+                <td>
+                    7 Layers
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Practical Model
+                </td>
+
+
+                <td>
+                    Reference Model
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Used on the Internet
+                </td>
+
+
+                <td>
+                    Used for conceptual understanding
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Application Layer combines OSI Application,
+                    Presentation and Session layers
+                </td>
+
+
+                <td>
+                    Has separate Application, Presentation
+                    and Session layers
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Network Access Layer combines OSI Physical
+                    and Data Link layers
+                </td>
+
+
+                <td>
+                    Has separate Physical and Data Link layers
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <!-- Mapping -->
+
+        <h2>
+            TCP/IP Model and OSI Model Mapping
+        </h2>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    TCP/IP Layer
+                </th>
+
+
+                <th>
+                    OSI Layers
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Application
+                </td>
+
+
+                <td>
+                    Application, Presentation, Session
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Transport
+                </td>
+
+
+                <td>
+                    Transport
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Internet
+                </td>
+
+
+                <td>
+                    Network
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Network Access
+                </td>
+
+
+                <td>
+                    Data Link, Physical
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <!-- Real World Example -->
+
+        <h2>
+            Real-World Example: Opening a Website
+        </h2>
+
+
+        <p>
+
+            Suppose you open:
+
+            <strong>
+                https://example.com
+            </strong>
+
+        </p>
+
+
+        <ol>
+
+            <li>
+
+                The browser creates an HTTPS request
+                at the Application Layer.
+
+            </li>
+
+
+            <li>
+
+                TCP establishes communication at the
+                Transport Layer.
+
+            </li>
+
+
+            <li>
+
+                IP adds source and destination addresses
+                at the Internet Layer.
+
+            </li>
+
+
+            <li>
+
+                Ethernet or Wi-Fi creates a frame at the
+                Network Access Layer.
+
+            </li>
+
+
+            <li>
+
+                The data travels through networks and routers
+                to reach the destination server.
+
+            </li>
+
+        </ol>
+
+
+        <!-- Cybersecurity -->
+
+        <h2>
+            TCP/IP Model and Cybersecurity
+        </h2>
+
+
+        <p>
+
+            Understanding the TCP/IP Model is extremely important
+            for cybersecurity professionals.
+
+        </p>
+
+
+        <p>
+
+            Security professionals analyze network traffic
+            across different layers to identify suspicious
+            activities and attacks.
+
+        </p>
+
+
+        <h3>
+            Common Security Issues by Layer
+        </h3>
+
+
+        <ul>
+
+            <li>
+
+                <strong>Application Layer:</strong>
+
+                SQL Injection, XSS and authentication attacks.
+
+            </li>
+
+
+            <li>
+
+                <strong>Transport Layer:</strong>
+
+                Port scanning and service enumeration.
+
+            </li>
+
+
+            <li>
+
+                <strong>Internet Layer:</strong>
+
+                IP spoofing and ICMP-based attacks.
+
+            </li>
+
+
+            <li>
+
+                <strong>Network Access Layer:</strong>
+
+                ARP spoofing and MAC-based attacks.
+
+            </li>
+
+        </ul>
+
+
+        <!-- Troubleshooting -->
+
+        <h2>
+            TCP/IP Model for Network Troubleshooting
+        </h2>
+
+
+        <p>
+
+            The TCP/IP Model can help troubleshoot network problems
+            layer by layer.
+
+        </p>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Problem
+                </th>
+
+
+                <th>
+                    Possible Layer
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Damaged Network Cable
+                </td>
+
+
+                <td>
+                    Network Access Layer
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Wrong IP Address
+                </td>
+
+
+                <td>
+                    Internet Layer
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Blocked Port
+                </td>
+
+
+                <td>
+                    Transport Layer
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    DNS Resolution Problem
+                </td>
+
+
+                <td>
+                    Application Layer
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <!-- Advantages -->
+
+        <h2>
+            Advantages of the TCP/IP Model
+        </h2>
+
+
+        <ul>
+
+            <li>
+                Used by the Internet
+            </li>
+
+
+            <li>
+                Supports different types of networks
+            </li>
+
+
+            <li>
+                Scalable for large networks
+            </li>
+
+
+            <li>
+                Supports multiple communication protocols
+            </li>
+
+
+            <li>
+                Provides reliable network communication
+            </li>
+
+
+            <li>
+                Helps standardize networking
+            </li>
+
+        </ul>
+
+
+        <!-- Conclusion -->
+
+        <h2>
+            Conclusion
+        </h2>
+
+
+        <p>
+
+            The TCP/IP Model is one of the most important concepts
+            in computer networking.
+
+        </p>
+
+
+        <p>
+
+            It explains how data travels between devices using
+            four layers:
+
+        </p>
+
+
+        <ol>
+
+            <li>
+                Application Layer
+            </li>
+
+
+            <li>
+                Transport Layer
+            </li>
+
+
+            <li>
+                Internet Layer
+            </li>
+
+
+            <li>
+                Network Access Layer
+            </li>
+
+        </ol>
+
+
+        <p>
+
+            A strong understanding of the TCP/IP Model is essential
+            for networking, system administration, cloud computing
+            and cybersecurity.
+
+        </p>
+
+
+        <p>
+
+            After learning the TCP/IP Model, the next important
+            networking topics are IP addressing, subnetting,
+            VLANs, routing, DNS and DHCP.
+
+        </p>
+
+
+        <p>
+    To understand the seven-layer networking framework,
+    read our complete guide to the
+    <a href="osi-model.html">
+        OSI Model
+    </a>.
+</p>
+
+<p>
+    To learn about IP addressing and subnetting,
+    read our guide on
+    <a href="ip-addressing.html">
+        IP Addressing
+    </a>.
+</p>
+
+<p>
+    You can also learn about the difference between
+    <a href="tcp-vs-udp.html">
+        TCP and UDP
+    </a>.
+</p>
+
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+
+        <h3>
+            🛡️ Cybersecurity Hub
+        </h3>
+
+
+        <p>
+            Learn Cybersecurity.
+            Build Your Future.
+        </p>
+
+
+        <p class="copyright">
+
+            © 2026 Cybersecurity Hub.
+            All Rights Reserved.
+
+        </p>
+
+
+    </footer>
+
+
+</body>
+
+</html>

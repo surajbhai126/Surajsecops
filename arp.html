@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ARP (Address Resolution Protocol) | Cybersecurity Hub</title>
+
+    <meta name="description"
+          content="Learn ARP, ARP Request, ARP Reply, ARP Cache, Gratuitous ARP and ARP Spoofing in this beginner-friendly networking guide.">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🛡️ Cybersecurity Hub
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="cybersecurity.html">Cybersecurity</a>
+
+            <a href="networking.html">Networking</a>
+
+            <a href="vapt.html">VAPT</a>
+
+            <a href="tools.html">Tools</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main Article -->
+
+    <main class="article">
+
+
+        <h1>
+            ARP (Address Resolution Protocol)
+        </h1>
+
+
+        <p class="date">
+            Learn ARP from Beginner to Advanced
+        </p>
+
+
+        <p>
+
+            ARP stands for Address Resolution Protocol.
+
+            It is used in IPv4 networks to find the MAC address
+            associated with a known IP address.
+
+        </p>
+
+
+        <h2>
+            Why is ARP Needed?
+        </h2>
+
+
+        <p>
+
+            Devices on a network use IP addresses for logical
+            communication and MAC addresses for local network
+            communication.
+
+        </p>
+
+
+        <p>
+
+            When a device knows the destination IP address but
+            does not know the destination MAC address, ARP is used
+            to discover the MAC address.
+
+        </p>
+
+
+        <h2>
+            Example of ARP
+        </h2>
+
+
+        <p>
+
+            Suppose a computer wants to communicate with:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                IP Address: 192.168.1.20
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            But the computer does not know the MAC address
+            of that device.
+
+        </p>
+
+
+        <p>
+
+            The computer sends an ARP Request asking:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                "Who has 192.168.1.20?"
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            The device with that IP address responds with
+            its MAC address.
+
+        </p>
+
+
+        <h2>
+            How ARP Works
+        </h2>
+
+
+        <h3>
+            Step 1: ARP Request
+        </h3>
+
+
+        <p>
+
+            The source device broadcasts an ARP Request
+            to all devices on the local network.
+
+        </p>
+
+
+        <p>
+
+            Example:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                Who has 192.168.1.20?
+            </strong>
+
+        </p>
+
+
+        <h3>
+            Step 2: ARP Reply
+        </h3>
+
+
+        <p>
+
+            The device that owns the requested IP address
+            sends an ARP Reply containing its MAC address.
+
+        </p>
+
+
+        <p>
+
+            Example:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                192.168.1.20 is at AA:BB:CC:11:22:33
+            </strong>
+
+        </p>
+
+
+        <h3>
+            Step 3: ARP Cache
+        </h3>
+
+
+        <p>
+
+            The source device stores the IP-to-MAC mapping
+            in its ARP cache.
+
+        </p>
+
+
+        <!-- Interactive ARP Simulator -->
+
+        <h2>
+            Interactive ARP Simulator
+        </h2>
+
+
+        <p>
+
+            Enter a destination IP address to simulate
+            the ARP Request, ARP Reply and ARP Cache process.
+
+        </p>
+
+
+        <div class="arp-simulator">
+
+
+            <label for="ipInput">
+
+                Destination IP Address
+
+            </label>
+
+
+            <input
+                type="text"
+                id="ipInput"
+                placeholder="Example: 192.168.1.20"
+            >
+
+
+            <button onclick="simulateARP()">
+
+                Send ARP Request
+
+            </button>
+
+
+            <button onclick="clearARP()">
+
+                Clear
+
+            </button>
+
+
+            <div
+                id="arpOutput"
+                class="arp-output">
+            </div>
+
+
+        </div>
+
+
+        <h2>
+            ARP Request vs ARP Reply
+        </h2>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    ARP Request
+                </th>
+
+
+                <th>
+                    ARP Reply
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Usually broadcast
+                </td>
+
+
+                <td>
+                    Usually unicast
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Asks for a MAC address
+                </td>
+
+
+                <td>
+                    Provides a MAC address
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Sent to multiple devices
+                </td>
+
+
+                <td>
+                    Sent to the requesting device
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <h2>
+            What is an ARP Cache?
+        </h2>
+
+
+        <p>
+
+            An ARP cache is a temporary table that stores
+            IP address and MAC address mappings.
+
+        </p>
+
+
+        <p>
+
+            Example:
+
+        </p>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    IP Address
+                </th>
+
+
+                <th>
+                    MAC Address
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    192.168.1.1
+                </td>
+
+
+                <td>
+                    AA:BB:CC:11:22:33
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    192.168.1.20
+                </td>
+
+
+                <td>
+                    DD:EE:FF:44:55:66
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <h2>
+            How to View ARP Cache
+        </h2>
+
+
+        <h3>
+            Windows
+        </h3>
+
+
+        <p>
+
+            Use the following command:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                arp -a
+            </strong>
+
+        </p>
+
+
+        <h3>
+            Linux
+        </h3>
+
+
+        <p>
+
+            Common commands include:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                ip neigh
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            or:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                arp -a
+            </strong>
+
+        </p>
+
+
+        <h2>
+            What is Gratuitous ARP?
+        </h2>
+
+
+        <p>
+
+            Gratuitous ARP is an ARP message sent by a device
+            without receiving an ARP Request first.
+
+        </p>
+
+
+        <p>
+
+            It can be used to:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Update ARP caches
+            </li>
+
+            <li>
+                Detect duplicate IP addresses
+            </li>
+
+            <li>
+                Update network devices after an IP change
+            </li>
+
+        </ul>
+
+
+        <h2>
+            What is ARP Spoofing?
+        </h2>
+
+
+        <p>
+
+            ARP Spoofing is a network attack in which an attacker
+            sends false ARP messages to associate their MAC address
+            with another device's IP address.
+
+        </p>
+
+
+        <p>
+
+            This can allow attackers to redirect network traffic
+            through an unauthorized device.
+
+        </p>
+
+
+        <h2>
+            ARP Poisoning and Cybersecurity
+        </h2>
+
+
+        <p>
+
+            ARP Poisoning can potentially enable
+            Man-in-the-Middle attacks on a local network.
+
+        </p>
+
+
+        <p>
+
+            Security professionals monitor unusual ARP activity
+            to detect suspicious network behavior.
+
+        </p>
+
+
+        <h2>
+            ARP Security and Prevention
+        </h2>
+
+
+        <ul>
+
+            <li>
+                Dynamic ARP Inspection (DAI)
+            </li>
+
+            <li>
+                DHCP Snooping
+            </li>
+
+            <li>
+                Static ARP Entries where appropriate
+            </li>
+
+            <li>
+                Network segmentation
+            </li>
+
+            <li>
+                Monitoring unusual ARP traffic
+            </li>
+
+        </ul>
+
+
+        <h2>
+            ARP and the OSI Model
+        </h2>
+
+
+        <p>
+
+            ARP operates between the Network Layer
+            and Data Link Layer concepts.
+
+        </p>
+
+
+        <p>
+
+            It helps map a Layer 3 IPv4 address
+            to a Layer 2 MAC address.
+
+        </p>
+
+
+        <h2>
+            ARP Interview Questions
+        </h2>
+
+
+        <ol>
+
+            <li>
+                What is ARP?
+            </li>
+
+            <li>
+                Why is ARP required?
+            </li>
+
+            <li>
+                What is the difference between ARP Request and ARP Reply?
+            </li>
+
+            <li>
+                What is an ARP Cache?
+            </li>
+
+            <li>
+                What is Gratuitous ARP?
+            </li>
+
+            <li>
+                What is ARP Spoofing?
+            </li>
+
+            <li>
+                How can ARP Poisoning be prevented?
+            </li>
+
+        </ol>
+
+
+        <h2>
+            Conclusion
+        </h2>
+
+
+        <p>
+
+            ARP is an important protocol used in IPv4 networks
+            to map IP addresses to MAC addresses.
+
+        </p>
+
+
+        <p>
+
+            Understanding ARP is essential for networking,
+            troubleshooting and cybersecurity.
+
+        </p>
+
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>
+            🛡️ Cybersecurity Hub
+        </h3>
+
+
+        <p>
+            Learn Cybersecurity.
+            Build Your Future.
+        </p>
+
+
+        <p class="copyright">
+            © 2026 Cybersecurity Hub.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ARP Simulator JavaScript -->
+
+    <script>
+
+        function simulateARP() {
+
+
+            let ip =
+                document.getElementById("ipInput").value;
+
+
+            let output =
+                document.getElementById("arpOutput");
+
+
+            if (ip.trim() === "") {
+
+
+                output.innerHTML = `
+
+                    <p>
+                        ⚠️ Please enter an IP address.
+                    </p>
+
+                `;
+
+
+                return;
+
+            }
+
+
+            output.innerHTML = `
+
+                <p>
+
+                    <strong>
+                        Step 1: ARP Request
+                    </strong>
+
+                </p>
+
+
+                <p>
+
+                    🔊 Broadcast:
+
+                    Who has
+
+                    <strong>
+                        ${ip}
+                    </strong>
+
+                    ?
+
+                </p>
+
+
+                <hr>
+
+
+                <p>
+
+                    <strong>
+                        Step 2: ARP Reply
+                    </strong>
+
+                </p>
+
+
+                <p>
+
+                    📩
+
+                    ${ip}
+
+                    is at
+
+                    <strong>
+                        AA:BB:CC:11:22:33
+                    </strong>
+
+                </p>
+
+
+                <hr>
+
+
+                <p>
+
+                    <strong>
+                        Step 3: ARP Cache Updated
+                    </strong>
+
+                </p>
+
+
+                <p>
+
+                    ${ip}
+
+                    →
+
+                    AA:BB:CC:11:22:33
+
+                </p>
+
+
+                <p>
+
+                    ✅
+
+                    <strong>
+                        ARP Resolution Successful
+                    </strong>
+
+                </p>
+
+            `;
+
+        }
+
+
+        function clearARP() {
+
+
+            document.getElementById("ipInput").value = "";
+
+
+            document.getElementById("arpOutput").innerHTML = "";
+
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

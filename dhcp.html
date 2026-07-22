@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>DHCP Explained: Complete Beginner Guide | Cybersecurity Hub</title>
+
+    <meta name="description"
+          content="Learn DHCP from beginner to advanced level including DORA process, DHCP server, client, relay agent, ports, reservation and DHCP security.">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🛡️ Cybersecurity Hub
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="cybersecurity.html">Cybersecurity</a>
+
+            <a href="networking.html">Networking</a>
+
+            <a href="vapt.html">VAPT</a>
+
+            <a href="tools.html">Tools</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main Article -->
+
+    <main class="article">
+
+
+        <h1>
+            DHCP Explained: Complete Beginner Guide
+        </h1>
+
+
+        <p class="date">
+            Learn Dynamic Host Configuration Protocol from Beginner to Advanced
+        </p>
+
+
+        <p>
+
+            DHCP stands for Dynamic Host Configuration Protocol.
+
+            It is a network protocol that automatically assigns
+            IP configuration to devices on a network.
+
+        </p>
+
+
+        <!-- What is DHCP -->
+
+        <h2>
+            What is DHCP?
+        </h2>
+
+
+        <p>
+
+            When a device connects to a network, it needs important
+            network information to communicate with other devices.
+
+        </p>
+
+
+        <p>
+
+            This information may include:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                IP Address
+            </li>
+
+            <li>
+                Subnet Mask
+            </li>
+
+            <li>
+                Default Gateway
+            </li>
+
+            <li>
+                DNS Server
+            </li>
+
+        </ul>
+
+
+        <p>
+
+            DHCP automatically provides this information
+            to network devices.
+
+        </p>
+
+
+        <!-- Why DHCP -->
+
+        <h2>
+            Why is DHCP Used?
+        </h2>
+
+
+        <p>
+
+            Without DHCP, network administrators would need
+            to manually configure every device.
+
+        </p>
+
+
+        <p>
+
+            DHCP makes network management easier by automatically
+            assigning network configuration.
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Reduces manual configuration
+            </li>
+
+            <li>
+                Prevents many IP address conflicts
+            </li>
+
+            <li>
+                Simplifies network management
+            </li>
+
+            <li>
+                Automatically provides DNS and gateway information
+            </li>
+
+        </ul>
+
+
+        <!-- DHCP Components -->
+
+        <h2>
+            DHCP Components
+        </h2>
+
+
+        <h3>
+            DHCP Client
+        </h3>
+
+
+        <p>
+
+            A DHCP client is a device that requests
+            network configuration.
+
+        </p>
+
+
+        <p>
+
+            Examples include:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Computer
+            </li>
+
+            <li>
+                Smartphone
+            </li>
+
+            <li>
+                Printer
+            </li>
+
+            <li>
+                Network device
+            </li>
+
+        </ul>
+
+
+        <h3>
+            DHCP Server
+        </h3>
+
+
+        <p>
+
+            A DHCP server assigns IP addresses and other
+            network configuration to DHCP clients.
+
+        </p>
+
+
+        <h3>
+            DHCP Relay Agent
+        </h3>
+
+
+        <p>
+
+            A DHCP Relay Agent forwards DHCP messages between
+            clients and servers located on different networks.
+
+        </p>
+
+
+        <!-- DORA -->
+
+        <h2>
+            DHCP DORA Process
+        </h2>
+
+
+        <p>
+
+            DHCP uses a four-step process known as DORA.
+
+        </p>
+
+
+        <p>
+            <strong>
+                DORA = Discover → Offer → Request → Acknowledgement
+            </strong>
+        </p>
+
+
+        <h3>
+            1. DHCP Discover
+        </h3>
+
+
+        <p>
+
+            The client broadcasts a DHCP Discover message
+            to find available DHCP servers.
+
+        </p>
+
+
+        <h3>
+            2. DHCP Offer
+        </h3>
+
+
+        <p>
+
+            The DHCP server responds with an offer
+            containing an available IP address and network configuration.
+
+        </p>
+
+
+        <h3>
+            3. DHCP Request
+        </h3>
+
+
+        <p>
+
+            The client sends a DHCP Request message
+            to request the offered IP configuration.
+
+        </p>
+
+
+        <h3>
+            4. DHCP Acknowledgement
+
+        </h3>
+
+
+        <p>
+
+            The DHCP server sends a DHCP Acknowledgement
+            and officially assigns the configuration to the client.
+
+        </p>
+
+
+        <!-- DHCP Ports -->
+
+        <h2>
+            DHCP Ports
+        </h2>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Device
+                </th>
+
+                <th>
+                    Port
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    DHCP Server
+                </td>
+
+                <td>
+                    UDP 67
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    DHCP Client
+                </td>
+
+                <td>
+                    UDP 68
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <!-- DHCP Lease -->
+
+        <h2>
+            What is a DHCP Lease?
+        </h2>
+
+
+        <p>
+
+            A DHCP lease is the amount of time for which
+            a client can use an assigned IP address.
+
+        </p>
+
+
+        <p>
+
+            When the lease expires, the client may request
+            a renewal from the DHCP server.
+
+        </p>
+
+
+        <!-- DHCP Reservation -->
+
+        <h2>
+            What is DHCP Reservation?
+        </h2>
+
+
+        <p>
+
+            DHCP reservation allows a specific device
+            to receive the same IP address every time.
+
+        </p>
+
+
+        <p>
+
+            The reservation is usually created using
+            the device's MAC address.
+
+        </p>
+
+
+        <p>
+
+            DHCP reservation is useful for devices such as:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Printers
+            </li>
+
+            <li>
+                Servers
+            </li>
+
+            <li>
+                Network devices
+            </li>
+
+            <li>
+                Security cameras
+            </li>
+
+        </ul>
+
+
+        <!-- DHCP Relay -->
+
+        <h2>
+            What is DHCP Relay?
+        </h2>
+
+
+        <p>
+
+            DHCP broadcasts normally do not cross routers.
+
+        </p>
+
+
+        <p>
+
+            If the DHCP server is located on a different network,
+            a DHCP Relay Agent can forward DHCP requests
+            to the DHCP server.
+
+        </p>
+
+
+        <p>
+
+            This allows one centralized DHCP server
+            to provide IP addresses to multiple networks.
+
+        </p>
+
+
+        <!-- DHCP and VLAN -->
+
+        <h2>
+            DHCP with VLANs
+        </h2>
+
+
+        <p>
+
+            In networks with multiple VLANs, DHCP Relay
+            is commonly used.
+
+        </p>
+
+
+        <p>
+
+            For example:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                VLAN 10 – Sales
+            </li>
+
+            <li>
+                VLAN 20 – HR
+            </li>
+
+            <li>
+                VLAN 30 – IT
+            </li>
+
+        </ul>
+
+
+        <p>
+
+            A centralized DHCP server can provide IP addresses
+            to all these VLANs using DHCP Relay.
+
+        </p>
+
+
+        <!-- DHCP Security -->
+
+        <h2>
+            DHCP and Cybersecurity
+        </h2>
+
+
+        <p>
+
+            DHCP is important in cybersecurity because
+            attackers can abuse DHCP services.
+
+        </p>
+
+
+        <p>
+
+            Network security professionals monitor DHCP activity
+            to identify suspicious behavior.
+
+        </p>
+
+
+        <!-- DHCP Starvation -->
+
+        <h2>
+            What is DHCP Starvation Attack?
+        </h2>
+
+
+        <p>
+
+            A DHCP Starvation attack attempts to consume
+            all available IP addresses from a DHCP server.
+
+        </p>
+
+
+        <p>
+
+            When the available IP pool is exhausted,
+            legitimate devices may not receive an IP address.
+
+        </p>
+
+
+        <p>
+
+            Network security controls such as switch security features
+            can help reduce this risk.
+
+        </p>
+
+
+        <!-- Rogue DHCP -->
+
+        <h2>
+            What is a Rogue DHCP Server?
+        </h2>
+
+
+        <p>
+
+            A Rogue DHCP Server is an unauthorized DHCP server
+            connected to a network.
+
+        </p>
+
+
+        <p>
+
+            It may provide incorrect network configuration
+            to clients.
+
+        </p>
+
+
+        <p>
+
+            This can potentially redirect network traffic
+            or cause connectivity problems.
+
+        </p>
+
+
+        <!-- DHCP Snooping -->
+
+        <h2>
+            What is DHCP Snooping?
+        </h2>
+
+
+        <p>
+
+            DHCP Snooping is a security feature available
+            on many managed network switches.
+
+        </p>
+
+
+        <p>
+
+            It helps identify trusted and untrusted DHCP traffic.
+
+        </p>
+
+
+        <p>
+
+            DHCP Snooping can help protect networks
+            against unauthorized DHCP servers.
+
+        </p>
+
+
+        <!-- Troubleshooting -->
+
+        <h2>
+            Common DHCP Troubleshooting
+        </h2>
+
+
+        <p>
+
+            If a device cannot connect to a network,
+            DHCP may be one of the areas to investigate.
+
+        </p>
+
+
+        <p>
+
+            Common checks include:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Is the DHCP server running?
+            </li>
+
+            <li>
+                Is the DHCP address pool exhausted?
+            </li>
+
+            <li>
+                Is the client connected to the correct VLAN?
+            </li>
+
+            <li>
+                Is DHCP Relay configured correctly?
+            </li>
+
+            <li>
+                Is the network interface working properly?
+            </li>
+
+        </ul>
+
+
+        <!-- DHCP vs Static -->
+
+        <h2>
+            DHCP vs Static IP Address
+        </h2>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    DHCP
+                </th>
+
+                <th>
+                    Static IP
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Automatically assigned
+                </td>
+
+                <td>
+                    Manually configured
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Easy to manage large networks
+                </td>
+
+                <td>
+                    Requires manual configuration
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    IP may change
+                </td>
+
+                <td>
+                    IP generally remains fixed
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <!-- Cybersecurity Importance -->
+
+        <h2>
+            Why DHCP is Important for Cybersecurity Professionals
+        </h2>
+
+
+        <p>
+
+            DHCP knowledge is useful for cybersecurity professionals
+            because it helps them understand how devices receive
+            network configuration.
+
+        </p>
+
+
+        <p>
+
+            DHCP knowledge is useful in:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Network Security
+            </li>
+
+            <li>
+                SOC Operations
+            </li>
+
+            <li>
+                Incident Response
+            </li>
+
+            <li>
+                Network Troubleshooting
+            </li>
+
+            <li>
+                Security Monitoring
+            </li>
+
+        </ul>
+
+
+        <!-- Conclusion -->
+
+        <h2>
+            Conclusion
+        </h2>
+
+
+        <p>
+
+            DHCP automatically provides network configuration
+            to devices.
+
+        </p>
+
+
+        <p>
+
+            The most important DHCP concepts are:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                DHCP Discover
+            </li>
+
+            <li>
+                DHCP Offer
+            </li>
+
+            <li>
+                DHCP Request
+            </li>
+
+            <li>
+                DHCP Acknowledgement
+            </li>
+
+            <li>
+                DHCP Lease
+            </li>
+
+            <li>
+                DHCP Relay
+            </li>
+
+            <li>
+                DHCP Reservation
+            </li>
+
+            <li>
+                DHCP Snooping
+            </li>
+
+            <li>
+                DHCP Security
+            </li>
+
+        </ul>
+
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>
+            🛡️ Cybersecurity Hub
+        </h3>
+
+
+        <p>
+            Learn Cybersecurity.
+            Build Your Future.
+        </p>
+
+
+        <p class="copyright">
+            © 2026 Cybersecurity Hub.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

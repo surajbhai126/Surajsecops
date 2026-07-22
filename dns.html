@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>DNS Explained: Complete Beginner Guide | Cybersecurity Hub</title>
+
+    <meta name="description"
+          content="Learn DNS from beginner to advanced level including DNS resolution, DNS records, recursive queries, caching, DNS security and common DNS attacks.">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🛡️ Cybersecurity Hub
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="cybersecurity.html">Cybersecurity</a>
+
+            <a href="networking.html">Networking</a>
+
+            <a href="vapt.html">VAPT</a>
+
+            <a href="tools.html">Tools</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main Article -->
+
+    <main class="article">
+
+
+        <h1>
+            DNS Explained: Complete Beginner Guide
+        </h1>
+
+
+        <p class="date">
+            Learn Domain Name System from Beginner to Advanced
+        </p>
+
+
+        <p>
+
+            DNS stands for Domain Name System.
+
+            DNS is one of the most important services on the Internet.
+            It translates human-readable domain names into IP addresses.
+
+        </p>
+
+
+        <!-- What is DNS -->
+
+        <h2>
+            What is DNS?
+        </h2>
+
+
+        <p>
+
+            Computers communicate with each other using IP addresses.
+
+            However, remembering IP addresses for every website
+            would be difficult for humans.
+
+        </p>
+
+
+        <p>
+
+            DNS solves this problem by converting domain names
+            into IP addresses.
+
+        </p>
+
+
+        <p>
+
+            Example:
+
+        </p>
+
+
+        <p>
+            <strong>
+                example.com → IP Address
+            </strong>
+        </p>
+
+
+        <p>
+
+            This process is similar to using a phone contact.
+
+            You remember a person's name, while your phone stores
+            the phone number.
+
+        </p>
+
+
+        <!-- Why DNS -->
+
+        <h2>
+            Why is DNS Important?
+        </h2>
+
+
+        <p>
+
+            DNS makes the Internet easier to use.
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Converts domain names into IP addresses
+            </li>
+
+            <li>
+                Makes websites easier to access
+            </li>
+
+            <li>
+                Helps applications locate servers
+            </li>
+
+            <li>
+                Supports email delivery
+            </li>
+
+            <li>
+                Helps distribute Internet traffic
+            </li>
+
+        </ul>
+
+
+        <!-- DNS Resolution -->
+
+        <h2>
+            How Does DNS Resolution Work?
+        </h2>
+
+
+        <p>
+
+            When you enter a website name in your browser,
+            the DNS resolution process begins.
+
+        </p>
+
+
+        <ol>
+
+            <li>
+
+                The user enters a domain name such as
+                <strong>example.com</strong>.
+
+            </li>
+
+
+            <li>
+
+                The device checks its local DNS cache.
+
+            </li>
+
+
+            <li>
+
+                If the IP address is not found,
+                the request is sent to a DNS resolver.
+
+            </li>
+
+
+            <li>
+
+                The resolver searches for the correct IP address.
+
+            </li>
+
+
+            <li>
+
+                The IP address is returned to the user's device.
+
+            </li>
+
+
+            <li>
+
+                The browser connects to the destination server.
+
+            </li>
+
+        </ol>
+
+
+        <!-- DNS Hierarchy -->
+
+        <h2>
+            DNS Hierarchy
+        </h2>
+
+
+        <p>
+
+            DNS uses a hierarchical structure.
+
+        </p>
+
+
+        <p>
+
+            The main levels of DNS hierarchy are:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Root DNS Servers
+            </li>
+
+            <li>
+                Top-Level Domain (TLD) Servers
+            </li>
+
+            <li>
+                Authoritative DNS Servers
+            </li>
+
+        </ul>
+
+
+        <h3>
+            Root DNS Servers
+        </h3>
+
+
+        <p>
+
+            Root DNS servers are at the top of the DNS hierarchy.
+
+            They direct queries toward the correct Top-Level Domain server.
+
+        </p>
+
+
+        <h3>
+            TLD Servers
+        </h3>
+
+
+        <p>
+
+            TLD servers handle domain extensions such as:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                .com
+            </li>
+
+            <li>
+                .org
+            </li>
+
+            <li>
+                .net
+            </li>
+
+            <li>
+                .in
+            </li>
+
+        </ul>
+
+
+        <h3>
+            Authoritative DNS Server
+        </h3>
+
+
+        <p>
+
+            The authoritative DNS server contains the actual DNS records
+            for a domain.
+
+        </p>
+
+
+        <!-- DNS Records -->
+
+        <h2>
+            Common DNS Records
+        </h2>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Record
+                </th>
+
+                <th>
+                    Purpose
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    A Record
+                </td>
+
+                <td>
+                    Maps a domain to an IPv4 address
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    AAAA Record
+                </td>
+
+                <td>
+                    Maps a domain to an IPv6 address
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    CNAME
+                </td>
+
+                <td>
+                    Creates an alias for another domain
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    MX Record
+                </td>
+
+                <td>
+                    Specifies mail servers
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    NS Record
+                </td>
+
+                <td>
+                    Specifies authoritative name servers
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    TXT Record
+                </td>
+
+                <td>
+                    Stores text-based information
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    PTR Record
+                </td>
+
+                <td>
+                    Used for reverse DNS lookups
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <!-- DNS Resolver -->
+
+        <h2>
+            What is a DNS Resolver?
+        </h2>
+
+
+        <p>
+
+            A DNS resolver receives DNS queries from clients
+            and searches for the requested IP address.
+
+        </p>
+
+
+        <p>
+
+            The resolver may already have the answer in its cache.
+
+            If not, it queries other DNS servers.
+
+        </p>
+
+
+        <!-- Recursive and Iterative -->
+
+        <h2>
+            Recursive vs Iterative DNS Queries
+        </h2>
+
+
+        <h3>
+            Recursive Query
+        </h3>
+
+
+        <p>
+
+            In a recursive query, the DNS resolver is expected
+            to provide the final answer to the client.
+
+        </p>
+
+
+        <h3>
+            Iterative Query
+        </h3>
+
+
+        <p>
+
+            In an iterative query, a DNS server provides the best answer
+            it currently has or refers the query to another DNS server.
+
+        </p>
+
+
+        <!-- DNS Caching -->
+
+        <h2>
+            What is DNS Caching?
+        </h2>
+
+
+        <p>
+
+            DNS caching stores previously resolved DNS information
+            for a specific period of time.
+
+        </p>
+
+
+        <p>
+
+            Caching improves performance and reduces unnecessary
+            DNS queries.
+
+        </p>
+
+
+        <p>
+
+            The time for which a DNS record is cached is controlled
+            by the TTL value.
+
+        </p>
+
+
+        <h3>
+            TTL (Time To Live)
+        </h3>
+
+
+        <p>
+
+            TTL determines how long a DNS record can remain
+            in a cache before it needs to be requested again.
+
+        </p>
+
+
+        <!-- DNS Ports -->
+
+        <h2>
+            DNS Ports and Protocols
+        </h2>
+
+
+        <p>
+
+            DNS commonly uses:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                UDP Port 53 – Normal DNS queries
+            </li>
+
+            <li>
+                TCP Port 53 – Large responses and zone transfers
+            </li>
+
+        </ul>
+
+
+        <!-- Forward and Reverse -->
+
+        <h2>
+            Forward and Reverse DNS Lookup
+        </h2>
+
+
+        <h3>
+            Forward DNS Lookup
+        </h3>
+
+
+        <p>
+
+            A forward lookup converts a domain name
+            into an IP address.
+
+        </p>
+
+
+        <p>
+            <strong>
+                Domain → IP Address
+            </strong>
+        </p>
+
+
+        <h3>
+            Reverse DNS Lookup
+        </h3>
+
+
+        <p>
+
+            A reverse lookup converts an IP address
+            back into a domain name.
+
+        </p>
+
+
+        <p>
+            <strong>
+                IP Address → Domain
+            </strong>
+        </p>
+
+
+        <!-- DNS Security -->
+
+        <h2>
+            DNS and Cybersecurity
+        </h2>
+
+
+        <p>
+
+            DNS is extremely important in cybersecurity.
+
+            Attackers and defenders both analyze DNS traffic
+            to identify suspicious activity.
+
+        </p>
+
+
+        <p>
+
+            DNS analysis can help identify:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Malicious domains
+            </li>
+
+            <li>
+                Phishing websites
+            </li>
+
+            <li>
+                Command and Control communication
+            </li>
+
+            <li>
+                Suspicious DNS queries
+            </li>
+
+            <li>
+                Data exfiltration attempts
+            </li>
+
+        </ul>
+
+
+        <!-- DNS Attacks -->
+
+        <h2>
+            Common DNS Attacks
+        </h2>
+
+
+        <h3>
+            DNS Spoofing
+        </h3>
+
+
+        <p>
+
+            DNS spoofing involves providing false DNS information
+            to redirect users to an incorrect destination.
+
+        </p>
+
+
+        <h3>
+            DNS Cache Poisoning
+        </h3>
+
+
+        <p>
+
+            DNS cache poisoning attempts to insert incorrect DNS information
+            into a DNS cache.
+
+        </p>
+
+
+        <h3>
+            DNS Tunneling
+        </h3>
+
+
+        <p>
+
+            DNS tunneling can abuse DNS queries and responses
+            to transfer data through DNS traffic.
+
+        </p>
+
+
+        <h3>
+            DNS Amplification
+
+        </h3>
+
+
+        <p>
+
+            DNS amplification is a type of DDoS attack
+            that abuses DNS servers to generate large amounts of traffic.
+
+        </p>
+
+
+        <!-- DNSSEC -->
+
+        <h2>
+            What is DNSSEC?
+        </h2>
+
+
+        <p>
+
+            DNSSEC stands for Domain Name System Security Extensions.
+
+        </p>
+
+
+        <p>
+
+            DNSSEC helps verify the authenticity and integrity
+            of DNS responses using digital signatures.
+
+        </p>
+
+
+        <p>
+
+            It helps protect against certain types of DNS manipulation.
+
+        </p>
+
+
+        <!-- DNS Troubleshooting -->
+
+        <h2>
+            Common DNS Troubleshooting Commands
+        </h2>
+
+
+        <p>
+
+            Security professionals and network administrators
+            commonly use DNS troubleshooting tools.
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                nslookup
+            </li>
+
+            <li>
+                dig
+            </li>
+
+            <li>
+                host
+            </li>
+
+        </ul>
+
+
+        <p>
+
+            These tools can be used to examine DNS records
+            and troubleshoot DNS resolution problems.
+
+        </p>
+
+
+        <!-- Cybersecurity Importance -->
+
+        <h2>
+            Why DNS is Important for Cybersecurity Professionals
+        </h2>
+
+
+        <p>
+
+            Cybersecurity professionals should understand DNS
+            because many attacks involve domain names and DNS traffic.
+
+        </p>
+
+
+        <p>
+
+            DNS knowledge is useful in:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Network Security
+            </li>
+
+            <li>
+                SOC Operations
+            </li>
+
+            <li>
+                Threat Hunting
+            </li>
+
+            <li>
+                Digital Forensics
+            </li>
+
+            <li>
+                Penetration Testing
+            </li>
+
+            <li>
+                Incident Response
+            </li>
+
+        </ul>
+
+
+        <!-- Conclusion -->
+
+        <h2>
+            Conclusion
+        </h2>
+
+
+        <p>
+
+            DNS is a fundamental Internet service that converts
+            human-readable domain names into IP addresses.
+
+        </p>
+
+
+        <p>
+
+            To understand DNS properly, learn:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                DNS Resolution
+            </li>
+
+            <li>
+                DNS Hierarchy
+            </li>
+
+            <li>
+                DNS Records
+            </li>
+
+            <li>
+                DNS Caching
+            </li>
+
+            <li>
+                DNS Queries
+            </li>
+
+            <li>
+                DNS Security
+            </li>
+
+            <li>
+                Common DNS Attacks
+            </li>
+
+            <li>
+                DNS Troubleshooting
+            </li>
+
+        </ul>
+
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>
+            🛡️ Cybersecurity Hub
+        </h3>
+
+
+        <p>
+            Learn Cybersecurity.
+            Build Your Future.
+        </p>
+
+
+        <p class="copyright">
+            © 2026 Cybersecurity Hub.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

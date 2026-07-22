@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>What is a Firewall? | Cybersecurity Hub</title>
+
+    <meta name="description"
+          content="Learn what a firewall is, how firewalls work, types of firewalls, firewall rules, packet filtering, stateful inspection, next-generation firewalls and firewall security.">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🛡️ Cybersecurity Hub
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="cybersecurity.html">Cybersecurity</a>
+
+            <a href="networking.html">Networking</a>
+
+            <a href="vapt.html">VAPT</a>
+
+            <a href="tools.html">Tools</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main Article -->
+
+    <main class="article">
+
+
+        <h1>
+            What is a Firewall?
+        </h1>
+
+
+        <p class="date">
+            Learn Firewalls from Beginner to Advanced
+        </p>
+
+
+        <p>
+
+            A firewall is a security device or software
+            that monitors and controls incoming and outgoing
+            network traffic based on predefined security rules.
+
+        </p>
+
+
+        <p>
+
+            In simple words, a firewall acts as a security barrier
+            between a trusted network and an untrusted network.
+
+        </p>
+
+
+        <h2>
+            Simple Firewall Example
+        </h2>
+
+
+        <p>
+
+            Consider the following network:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                Internet → Firewall → Internal Network
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            The firewall examines network traffic and decides
+            whether the traffic should be allowed or blocked.
+
+        </p>
+
+
+        <h2>
+            Why is a Firewall Needed?
+        </h2>
+
+
+        <p>
+
+            Without proper security controls, unauthorized traffic
+            may reach internal systems and services.
+
+        </p>
+
+
+        <p>
+
+            A firewall helps organizations:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Block unauthorized network traffic.
+            </li>
+
+
+            <li>
+                Allow legitimate communication.
+            </li>
+
+
+            <li>
+                Control access to network services.
+            </li>
+
+
+            <li>
+                Protect internal networks.
+            </li>
+
+
+            <li>
+                Monitor network connections.
+            </li>
+
+        </ul>
+
+
+        <h2>
+            How Does a Firewall Work?
+        </h2>
+
+
+        <p>
+
+            A firewall analyzes network traffic
+            and compares it with configured security rules.
+
+        </p>
+
+
+        <p>
+
+            Based on the rules, the firewall may:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Allow the traffic.
+            </li>
+
+
+            <li>
+                Block the traffic.
+            </li>
+
+
+            <li>
+                Log the traffic.
+            </li>
+
+
+            <li>
+                Inspect the traffic further.
+            </li>
+
+        </ul>
+
+
+        <h2>
+            Firewall Rule Example
+        </h2>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Source
+                </th>
+
+
+                <th>
+                    Destination
+                </th>
+
+
+                <th>
+                    Service
+                </th>
+
+
+                <th>
+                    Action
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Internal Network
+                </td>
+
+
+                <td>
+                    Internet
+                </td>
+
+
+                <td>
+                    HTTPS
+                </td>
+
+
+                <td>
+                    Allow
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Unknown Network
+                </td>
+
+
+                <td>
+                    Internal Server
+                </td>
+
+
+                <td>
+                    SSH
+                </td>
+
+
+                <td>
+                    Deny
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <h2>
+            Important Firewall Rule Components
+        </h2>
+
+
+        <p>
+
+            Firewall rules commonly use several parameters
+            to control network traffic.
+
+        </p>
+
+
+        <ul>
+
+            <li>
+
+                <strong>Source:</strong>
+                The origin of the traffic.
+
+            </li>
+
+
+            <li>
+
+                <strong>Destination:</strong>
+                The target system or network.
+
+            </li>
+
+
+            <li>
+
+                <strong>Source Port:</strong>
+                The port from which traffic originates.
+
+            </li>
+
+
+            <li>
+
+                <strong>Destination Port:</strong>
+                The service port being accessed.
+
+            </li>
+
+
+            <li>
+
+                <strong>Protocol:</strong>
+                TCP, UDP, ICMP and other protocols.
+
+            </li>
+
+
+            <li>
+
+                <strong>Action:</strong>
+                Allow, Deny or Drop.
+
+            </li>
+
+        </ul>
+
+
+        <h2>
+            Types of Firewalls
+        </h2>
+
+
+        <h3>
+            1. Packet Filtering Firewall
+        </h3>
+
+
+        <p>
+
+            A packet filtering firewall examines individual
+            network packets.
+
+        </p>
+
+
+        <p>
+
+            It can filter traffic based on:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Source IP address
+            </li>
+
+
+            <li>
+                Destination IP address
+            </li>
+
+
+            <li>
+                Port number
+            </li>
+
+
+            <li>
+                Protocol
+            </li>
+
+        </ul>
+
+
+        <h3>
+            2. Stateful Firewall
+        </h3>
+
+
+        <p>
+
+            A stateful firewall tracks the state
+            of active network connections.
+
+        </p>
+
+
+        <p>
+
+            It understands whether a packet belongs
+            to an existing legitimate connection.
+
+        </p>
+
+
+        <h3>
+            3. Proxy Firewall
+        </h3>
+
+
+        <p>
+
+            A proxy firewall acts as an intermediary
+            between the client and the destination server.
+
+        </p>
+
+
+        <p>
+
+            The client does not directly communicate
+            with the destination server.
+
+        </p>
+
+
+        <h3>
+            4. Next-Generation Firewall (NGFW)
+        </h3>
+
+
+        <p>
+
+            A Next-Generation Firewall provides advanced
+            traffic inspection and security capabilities.
+
+        </p>
+
+
+        <p>
+
+            Common features may include:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Application identification
+            </li>
+
+
+            <li>
+                User identification
+            </li>
+
+
+            <li>
+                Intrusion prevention
+            </li>
+
+
+            <li>
+                Advanced traffic inspection
+            </li>
+
+
+            <li>
+                Threat detection
+            </li>
+
+        </ul>
+
+
+        <h2>
+            Network Firewall vs Host-Based Firewall
+        </h2>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Network Firewall
+                </th>
+
+
+                <th>
+                    Host-Based Firewall
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Protects multiple systems or networks.
+                </td>
+
+
+                <td>
+                    Protects an individual device.
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Usually placed at network boundaries.
+                </td>
+
+
+                <td>
+                    Installed directly on the endpoint.
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Example: Enterprise Firewall
+                </td>
+
+
+                <td>
+                    Example: Windows Firewall
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <h2>
+            Firewall: Allow, Deny and Drop
+        </h2>
+
+
+        <h3>
+            Allow
+        </h3>
+
+
+        <p>
+
+            The firewall permits the traffic
+            to continue to its destination.
+
+        </p>
+
+
+        <h3>
+            Deny
+        </h3>
+
+
+        <p>
+
+            The firewall rejects the traffic
+            according to the configured rule.
+
+        </p>
+
+
+        <h3>
+            Drop
+        </h3>
+
+
+        <p>
+
+            The firewall silently discards
+            the traffic without sending a response.
+
+        </p>
+
+
+        <h2>
+            Inbound and Outbound Traffic
+        </h2>
+
+
+        <h3>
+            Inbound Traffic
+        </h3>
+
+
+        <p>
+
+            Inbound traffic enters a network
+            or device from an external source.
+
+        </p>
+
+
+        <h3>
+            Outbound Traffic
+        </h3>
+
+
+        <p>
+
+            Outbound traffic leaves a network
+            or device toward an external destination.
+
+        </p>
+
+
+        <h2>
+            Firewall and Ports
+        </h2>
+
+
+        <p>
+
+            Firewalls can control access to specific ports.
+
+        </p>
+
+
+        <p>
+
+            For example:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                Allow TCP Port 443 → HTTPS
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                Block TCP Port 23 → Telnet
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            This allows organizations to control
+            which services are accessible.
+
+        </p>
+
+
+        <h2>
+            Firewall and Applications
+        </h2>
+
+
+        <p>
+
+            Modern firewalls can identify applications
+            instead of relying only on port numbers.
+
+        </p>
+
+
+        <p>
+
+            For example, a firewall may identify
+            a specific application using traffic analysis
+            and apply security policies accordingly.
+
+        </p>
+
+
+        <h2>
+            Firewall and Network Security
+        </h2>
+
+
+        <p>
+
+            Firewalls are an important part of
+            network security architecture.
+
+        </p>
+
+
+        <p>
+
+            However, a firewall alone cannot provide
+            complete security.
+
+        </p>
+
+
+        <p>
+
+            Organizations should also use:
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Strong authentication
+            </li>
+
+
+            <li>
+                Network segmentation
+            </li>
+
+
+            <li>
+                Endpoint security
+            </li>
+
+
+            <li>
+                Intrusion detection and prevention
+            </li>
+
+
+            <li>
+                Security monitoring
+            </li>
+
+
+            <li>
+                Regular updates
+            </li>
+
+        </ul>
+
+
+        <h2>
+            Firewall in Cybersecurity
+        </h2>
+
+
+        <p>
+
+            Cybersecurity professionals use firewalls
+            to control network access and reduce
+            unauthorized communication.
+
+        </p>
+
+
+        <p>
+
+            Security analysts may investigate firewall logs
+            to identify suspicious connections,
+            blocked traffic and unusual activity.
+
+        </p>
+
+
+        <h2>
+            Firewall Interview Questions
+        </h2>
+
+
+        <ol>
+
+            <li>
+                What is a firewall?
+            </li>
+
+
+            <li>
+                How does a firewall work?
+            </li>
+
+
+            <li>
+                What is a stateful firewall?
+            </li>
+
+
+            <li>
+                What is a stateless firewall?
+            </li>
+
+
+            <li>
+                What is the difference between a network firewall and a host-based firewall?
+            </li>
+
+
+            <li>
+                What is the difference between Deny and Drop?
+            </li>
+
+
+            <li>
+                What is an NGFW?
+            </li>
+
+
+            <li>
+                What is the difference between inbound and outbound traffic?
+            </li>
+
+
+            <li>
+                How does a firewall control ports and protocols?
+            </li>
+
+
+            <li>
+                Can a firewall provide complete cybersecurity protection?
+            </li>
+
+        </ol>
+
+
+        <h2>
+            Conclusion
+        </h2>
+
+
+        <p>
+
+            A firewall is a security control that monitors
+            and manages network traffic according to
+            predefined security rules.
+
+        </p>
+
+
+        <p>
+
+            Understanding firewalls is essential for networking,
+            system administration and cybersecurity.
+
+        </p>
+
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>
+            🛡️ Cybersecurity Hub
+        </h3>
+
+
+        <p>
+            Learn Cybersecurity.
+            Build Your Future.
+        </p>
+
+
+        <p class="copyright">
+            © 2026 Cybersecurity Hub.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

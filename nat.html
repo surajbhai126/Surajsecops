@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+
+    <!-- SEO Title -->
+
+    <title>
+        NAT Explained: Static NAT, Dynamic NAT & PAT | Cybersecurity Hub
+    </title>
+
+
+    <!-- SEO Description -->
+
+    <meta name="description"
+          content="Learn Network Address Translation (NAT) from beginner to advanced. Understand Static NAT, Dynamic NAT, PAT, NAT Overload, SNAT, DNAT, NAT tables and NAT vs Firewall.">
+
+
+    <!-- SEO Keywords -->
+
+    <meta name="keywords"
+          content="NAT, Network Address Translation, Static NAT, Dynamic NAT, PAT, NAT Overload, SNAT, DNAT, NAT explained, NAT vs Firewall, networking">
+
+
+    <!-- Author -->
+
+    <meta name="author"
+          content="Cybersecurity Hub">
+
+
+    <!-- Search Engine Instructions -->
+
+    <meta name="robots"
+          content="index, follow">
+
+
+    <!-- Canonical URL -->
+
+    <link rel="canonical"
+          href="https://surajbhai126.github.io/Surajsecops/nat.html">
+
+
+    <!-- Open Graph SEO -->
+
+    <meta property="og:title"
+          content="NAT Explained: Static NAT, Dynamic NAT & PAT">
+
+    <meta property="og:description"
+          content="Complete beginner-friendly guide to NAT, Static NAT, Dynamic NAT, PAT, NAT Overload, SNAT and DNAT.">
+
+    <meta property="og:type"
+          content="article">
+
+    <meta property="og:url"
+          content="https://surajbhai126.github.io/Surajsecops/nat.html">
+
+    <meta property="og:site_name"
+          content="Cybersecurity Hub">
+
+
+    <!-- Twitter SEO -->
+
+    <meta name="twitter:card"
+          content="summary">
+
+    <meta name="twitter:title"
+          content="NAT Explained: Static NAT, Dynamic NAT & PAT">
+
+    <meta name="twitter:description"
+          content="Learn NAT, Static NAT, Dynamic NAT, PAT, SNAT, DNAT and NAT Overload with practical examples.">
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🛡️ Cybersecurity Hub
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="cybersecurity.html">
+                Cybersecurity
+            </a>
+
+            <a href="networking.html">
+                Networking
+            </a>
+
+            <a href="vapt.html">
+                VAPT
+            </a>
+
+            <a href="tools.html">
+                Tools
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main Article -->
+
+    <main class="article">
+
+
+        <h1>
+            NAT Explained: Static NAT, Dynamic NAT & PAT
+        </h1>
+
+
+        <p class="date">
+            Learn Network Address Translation from Beginner to Advanced
+        </p>
+
+
+        <!-- Introduction -->
+
+        <p>
+
+            NAT stands for
+            <strong>Network Address Translation</strong>.
+
+            It is a networking technology used to translate
+            private IP addresses into public IP addresses
+            and public IP addresses into private IP addresses.
+
+        </p>
+
+
+        <p>
+
+            NAT is commonly used in routers and firewalls
+            to allow devices inside private networks to
+            communicate with the Internet.
+
+        </p>
+
+
+        <p>
+
+            In most home and office networks, multiple devices
+            use private IP addresses and share a single public
+            IP address using NAT and PAT.
+
+        </p>
+
+
+        <!-- Why NAT -->
+
+        <h2>
+            Why is NAT Needed?
+        </h2>
+
+
+        <p>
+
+            IPv4 provides a limited number of public IP addresses.
+
+            Because of this limitation, organizations and home
+            networks use private IP addresses internally.
+
+        </p>
+
+
+        <p>
+
+            Private IP addresses are not directly routable
+            over the public Internet.
+
+            NAT translates private addresses into public addresses
+            when devices communicate with the Internet.
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Conserves public IPv4 addresses
+            </li>
+
+            <li>
+                Allows multiple devices to access the Internet
+            </li>
+
+            <li>
+                Allows private networks to communicate with public networks
+            </li>
+
+            <li>
+                Provides address translation between networks
+            </li>
+
+        </ul>
+
+
+        <!-- Private and Public IP -->
+
+        <h2>
+            Private IP Address vs Public IP Address
+        </h2>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Private IP Address
+                </th>
+
+                <th>
+                    Public IP Address
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Used inside private networks
+                </td>
+
+                <td>
+                    Used on the Internet
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Not directly routable on the Internet
+                </td>
+
+                <td>
+                    Routable over the Internet
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Can be reused in different private networks
+                </td>
+
+                <td>
+                    Globally unique
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <!-- Private IP Ranges -->
+
+        <h2>
+            Private IPv4 Address Ranges
+        </h2>
+
+
+        <p>
+            The following IPv4 ranges are reserved for private networks:
+        </p>
+
+
+        <ul>
+
+            <li>
+                <strong>10.0.0.0/8</strong>
+            </li>
+
+            <li>
+                <strong>172.16.0.0/12</strong>
+            </li>
+
+            <li>
+                <strong>192.168.0.0/16</strong>
+            </li>
+
+        </ul>
+
+
+        <!-- How NAT Works -->
+
+        <h2>
+            How Does NAT Work?
+        </h2>
+
+
+        <p>
+
+            Suppose a computer inside a private network has:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                Private IP: 192.168.1.10
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            The router has:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                Public IP: 203.0.113.10
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            When the internal computer accesses a website,
+            the NAT router translates the private source IP
+            into a public IP address.
+
+        </p>
+
+
+        <p>
+
+            The external Internet sees the public IP address
+            instead of the internal private IP address.
+
+        </p>
+
+
+        <!-- NAT Example -->
+
+        <h2>
+            NAT Translation Example
+        </h2>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Before NAT
+                </th>
+
+                <th>
+                    After NAT
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    192.168.1.10
+                </td>
+
+                <td>
+                    203.0.113.10
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <p>
+
+            The NAT device maintains a translation table
+            to track the relationship between internal private
+            addresses and translated public addresses.
+
+        </p>
+
+
+        <!-- Types -->
+
+        <h2>
+            Types of NAT
+        </h2>
+
+
+        <p>
+            The three major types of NAT are:
+        </p>
+
+
+        <ul>
+
+            <li>
+                Static NAT
+            </li>
+
+            <li>
+                Dynamic NAT
+            </li>
+
+            <li>
+                PAT or NAT Overload
+            </li>
+
+        </ul>
+
+
+        <!-- Static NAT -->
+
+        <h2>
+            1. Static NAT
+        </h2>
+
+
+        <p>
+
+            Static NAT creates a permanent
+            one-to-one mapping between a private IP address
+            and a public IP address.
+
+        </p>
+
+
+        <p>
+
+            Example:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                192.168.1.10 → 203.0.113.10
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            The mapping remains fixed unless it is manually changed.
+
+        </p>
+
+
+        <h3>
+            Uses of Static NAT
+        </h3>
+
+
+        <ul>
+
+            <li>
+                Web Servers
+            </li>
+
+            <li>
+                Mail Servers
+            </li>
+
+            <li>
+                Publicly accessible internal servers
+            </li>
+
+            <li>
+                Remote access systems
+            </li>
+
+        </ul>
+
+
+        <!-- Dynamic NAT -->
+
+        <h2>
+            2. Dynamic NAT
+        </h2>
+
+
+        <p>
+
+            Dynamic NAT maps private IP addresses
+            to public IP addresses from a pool.
+
+        </p>
+
+
+        <p>
+
+            When an internal device needs Internet access,
+            the router dynamically assigns an available public
+            IP address from the configured pool.
+
+        </p>
+
+
+        <p>
+
+            When the connection ends, the public IP address
+            may become available for another device.
+
+        </p>
+
+
+        <!-- PAT -->
+
+        <h2>
+            3. PAT / NAT Overload
+        </h2>
+
+
+        <p>
+
+            PAT stands for
+            <strong>Port Address Translation</strong>.
+
+            It is also called
+            <strong>NAT Overload</strong>.
+
+        </p>
+
+
+        <p>
+
+            PAT allows multiple private devices
+            to share a single public IP address.
+
+        </p>
+
+
+        <p>
+
+            Port numbers are used to identify
+            different internal connections.
+
+        </p>
+
+
+        <h3>
+            PAT Example
+        </h3>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Private Connection
+                </th>
+
+                <th>
+                    Translated Public Connection
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    192.168.1.10:5000
+                </td>
+
+                <td>
+                    203.0.113.10:30001
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    192.168.1.20:5001
+                </td>
+
+                <td>
+                    203.0.113.10:30002
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <p>
+
+            Both devices share the same public IP address,
+            but different port numbers allow the NAT device
+            to track each connection.
+
+        </p>
+
+
+        <!-- Translation Table -->
+
+        <h2>
+            NAT Translation Table
+        </h2>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Inside Local
+                </th>
+
+                <th>
+                    Inside Global
+                </th>
+
+                <th>
+                    Destination
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    192.168.1.10:5000
+                </td>
+
+                <td>
+                    203.0.113.10:30001
+                </td>
+
+                <td>
+                    8.8.8.8:443
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    192.168.1.20:5001
+                </td>
+
+                <td>
+                    203.0.113.10:30002
+                </td>
+
+                <td>
+                    1.1.1.1:443
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <!-- NAT Terminology -->
+
+        <h2>
+            Inside Local and Inside Global
+        </h2>
+
+
+        <h3>
+            Inside Local
+        </h3>
+
+
+        <p>
+
+            Inside Local refers to the private IP address
+            assigned to a device inside the local network.
+
+        </p>
+
+
+        <h3>
+            Inside Global
+        </h3>
+
+
+        <p>
+
+            Inside Global refers to the public IP address
+            used to represent the internal device
+            to external networks.
+
+        </p>
+
+
+        <!-- SNAT -->
+
+        <h2>
+            Source NAT (SNAT)
+        </h2>
+
+
+        <p>
+
+            Source NAT changes the source IP address
+            of a packet.
+
+        </p>
+
+
+        <p>
+
+            It is commonly used when internal users
+            access the Internet.
+
+        </p>
+
+
+        <p>
+
+            Example:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                192.168.1.10 → 203.0.113.10
+            </strong>
+
+        </p>
+
+
+        <!-- DNAT -->
+
+        <h2>
+            Destination NAT (DNAT)
+        </h2>
+
+
+        <p>
+
+            Destination NAT changes the destination IP address
+            of a packet.
+
+        </p>
+
+
+        <p>
+
+            DNAT is commonly used to forward traffic
+            from a public IP address to an internal server.
+
+        </p>
+
+
+        <p>
+
+            Example:
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                203.0.113.10 → 192.168.1.10
+            </strong>
+
+        </p>
+
+
+        <!-- NAT vs PAT -->
+
+        <h2>
+            NAT vs PAT
+        </h2>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    NAT
+                </th>
+
+                <th>
+                    PAT
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Translates IP addresses
+                </td>
+
+                <td>
+                    Translates IP addresses and port numbers
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Can create one-to-one mappings
+                </td>
+
+                <td>
+                    Allows multiple devices to share one public IP
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    May require multiple public IP addresses
+                </td>
+
+                <td>
+                    Uses port numbers to identify connections
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <!-- NAT and Security -->
+
+        <h2>
+            NAT and Network Security
+        </h2>
+
+
+        <p>
+
+            NAT can hide internal private IP addresses
+            from external networks.
+
+        </p>
+
+
+        <p>
+
+            However, NAT is not a firewall.
+
+            NAT alone should not be considered
+            a complete security solution.
+
+        </p>
+
+
+        <p>
+
+            Firewalls are required to inspect traffic
+            and apply security policies.
+
+        </p>
+
+
+        <!-- NAT vs Firewall -->
+
+        <h2>
+            NAT vs Firewall
+        </h2>
+
+
+        <table>
+
+            <tr>
+
+                <th>
+                    NAT
+                </th>
+
+                <th>
+                    Firewall
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Translates IP addresses
+                </td>
+
+                <td>
+                    Filters network traffic
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Performs address translation
+                </td>
+
+                <td>
+                    Applies security rules
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Not primarily a security control
+                </td>
+
+                <td>
+                    Designed to control network traffic
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <!-- Advantages -->
+
+        <h2>
+            Advantages of NAT
+        </h2>
+
+
+        <ul>
+
+            <li>
+                Conserves public IPv4 addresses
+            </li>
+
+            <li>
+                Allows multiple devices to share one public IP
+            </li>
+
+            <li>
+                Supports private network communication
+            </li>
+
+            <li>
+                Hides internal addressing structure
+            </li>
+
+            <li>
+                Helps organizations use private IP addressing
+            </li>
+
+        </ul>
+
+
+        <!-- Disadvantages -->
+
+        <h2>
+            Disadvantages of NAT
+        </h2>
+
+
+        <ul>
+
+            <li>
+                Can complicate troubleshooting
+            </li>
+
+            <li>
+                Can affect some applications
+            </li>
+
+            <li>
+                Can complicate end-to-end communication
+            </li>
+
+            <li>
+                Requires translation table management
+            </li>
+
+        </ul>
+
+
+        <!-- Interview Questions -->
+
+        <h2>
+            NAT Interview Questions
+        </h2>
+
+
+        <ol>
+
+            <li>
+                What is NAT?
+            </li>
+
+            <li>
+                Why is NAT used?
+            </li>
+
+            <li>
+                What is Static NAT?
+            </li>
+
+            <li>
+                What is Dynamic NAT?
+            </li>
+
+            <li>
+                What is PAT?
+            </li>
+
+            <li>
+                What is NAT Overload?
+            </li>
+
+            <li>
+                What is the difference between NAT and PAT?
+            </li>
+
+            <li>
+                What is Source NAT?
+            </li>
+
+            <li>
+                What is Destination NAT?
+            </li>
+
+            <li>
+                Is NAT a firewall?
+            </li>
+
+        </ol>
+
+
+        <!-- Conclusion -->
+
+        <h2>
+            Conclusion
+        </h2>
+
+
+        <p>
+
+            NAT is an important networking technology
+            that allows private networks to communicate
+            with public networks.
+
+        </p>
+
+
+        <p>
+
+            Static NAT, Dynamic NAT and PAT are the major
+            NAT implementations used in modern networks.
+
+        </p>
+
+
+        <p>
+
+            Understanding NAT is essential for networking,
+            cybersecurity and firewall administration.
+
+        </p>
+
+
+        <!-- Internal Links -->
+
+        <h2>
+            Related Networking Topics
+        </h2>
+
+
+        <p>
+
+            To understand private and public IP addresses,
+            read our complete guide on
+
+            <a href="ip-addressing.html">
+                IP Addressing
+            </a>.
+
+        </p>
+
+
+        <p>
+
+            To learn how IP networks are divided into smaller
+            networks, read our complete guide on
+
+            <a href="subnetting.html">
+                Subnetting
+            </a>.
+
+        </p>
+
+
+        <p>
+
+            To understand how different departments are separated
+            into logical networks, read our guide on
+
+            <a href="vlan.html">
+                VLANs
+            </a>.
+
+        </p>
+
+
+        <p>
+
+            To understand how devices communicate across different
+            networking layers, read our guide on
+
+            <a href="osi-model.html">
+                OSI Model
+            </a>.
+
+        </p>
+
+
+        <p>
+
+            To learn about network communication protocols,
+            read our guide on
+
+            <a href="tcp-ip-model.html">
+                TCP/IP Model
+            </a>.
+
+        </p>
+
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+
+        <h3>
+            🛡️ Cybersecurity Hub
+        </h3>
+
+
+        <p>
+            Learn Cybersecurity.
+            Build Your Future.
+        </p>
+
+
+        <p class="copyright">
+            © 2026 Cybersecurity Hub.
+            All Rights Reserved.
+        </p>
+
+
+    </footer>
+
+
+</body>
+
+</html>
