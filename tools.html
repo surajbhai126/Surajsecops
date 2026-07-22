@@ -2,15 +2,80 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Security Tools | Cybersecurity Hub</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+
+    <title>
+        Free Cybersecurity Tools | Base64 Encoder & Decoder | Cybersecurity Hub
+    </title>
+
+
+    <meta name="description"
+          content="Use free online cybersecurity tools including Base64 Encoder and Decoder. Learn encoding concepts and use browser-based security tools for cybersecurity education.">
+
+
+    <meta name="keywords"
+          content="cybersecurity tools, free cybersecurity tools, Base64 encoder, Base64 decoder, online security tools, ethical hacking tools, cybersecurity learning tools">
+
+
+    <meta name="author"
+          content="Cybersecurity Hub">
+
+
+    <meta name="robots"
+          content="index, follow">
+
+
+    <!-- Canonical URL -->
+
+    <link rel="canonical"
+          href="https://surajbhai126.github.io/Surajsecops/tools.html">
+
+
+    <!-- Stylesheet -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+
+    <!-- Open Graph SEO -->
+
+    <meta property="og:title"
+          content="Free Cybersecurity Tools | Base64 Encoder & Decoder | Cybersecurity Hub">
+
+
+    <meta property="og:description"
+          content="Use free browser-based cybersecurity tools and learn important security concepts such as Base64 encoding and decoding.">
+
+
+    <meta property="og:type"
+          content="website">
+
+
+    <meta property="og:url"
+          content="https://surajbhai126.github.io/Surajsecops/tools.html">
+
+
+    <meta property="og:site_name"
+          content="Cybersecurity Hub">
+
+
+    <!-- Google Search Console Verification -->
+
+    <meta name="google-site-verification"
+          content="PkU9d2lGSRB9QFqp-Ijw364TvfhN3-cQ0Ke_-PJY13Y">
+
 </head>
 
+
 <body>
+
+
+    <!-- Navigation -->
 
     <nav class="navbar">
 
@@ -18,51 +83,86 @@
             🛡️ Cybersecurity Hub
         </div>
 
+
         <div class="nav-links">
 
             <a href="index.html">Home</a>
-            <a href="cybersecurity.html">Cybersecurity</a>
-            <a href="networking.html">Networking</a>
-            <a href="vapt.html">VAPT</a>
-            <a href="tools.html">Tools</a>
+
+            <a href="cybersecurity.html">
+                Cybersecurity
+            </a>
+
+            <a href="networking.html">
+                Networking
+            </a>
+
+            <a href="vapt.html">
+                VAPT
+            </a>
+
+            <a href="tools.html">
+                Tools
+            </a>
 
         </div>
 
     </nav>
 
 
+    <!-- Tools Section -->
+
     <main class="tools-container">
 
-        <h1>Cybersecurity Tools</h1>
+
+        <h1>
+            Free Cybersecurity Tools
+        </h1>
+
 
         <p>
-            Free educational tools for cybersecurity students.
+            Simple browser-based tools for cybersecurity students
+            and IT learners.
         </p>
 
 
+        <!-- Base64 Tool -->
+
         <div class="tool-box">
 
-            <h2>Base64 Encoder / Decoder</h2>
+
+            <h2>
+                Base64 Encoder / Decoder
+            </h2>
+
+
+            <p>
+                Encode text into Base64 or decode Base64 data
+                directly in your browser.
+            </p>
+
 
             <textarea
                 id="inputText"
-                placeholder="Enter your text here...">
-            </textarea>
+                placeholder="Enter text or Base64 data here..."></textarea>
 
 
             <div class="tool-buttons">
+
 
                 <button onclick="encodeText()">
                     Encode
                 </button>
 
+
                 <button onclick="decodeText()">
                     Decode
                 </button>
 
+
                 <button onclick="clearText()">
                     Clear
                 </button>
+
 
             </div>
 
@@ -70,73 +170,162 @@
             <textarea
                 id="outputText"
                 placeholder="Output will appear here..."
-                readonly>
-            </textarea>
+                readonly></textarea>
+
 
         </div>
+
+
+        <!-- Educational Note -->
+
+        <div class="tool-box">
+
+
+            <h2>
+                What is Base64?
+            </h2>
+
+
+            <p>
+
+                Base64 is an encoding method that converts
+                binary data into text characters.
+
+                It is commonly used in web applications,
+                email systems and data transmission.
+
+            </p>
+
+
+            <p>
+
+                ⚠️ Base64 is encoding, not encryption.
+                It should not be used to protect sensitive data.
+
+            </p>
+
+
+        </div>
+
 
     </main>
 
 
+    <!-- Footer -->
+
     <footer>
 
-        <h3>🛡️ Cybersecurity Hub</h3>
+
+        <h3>
+            🛡️ Cybersecurity Hub
+        </h3>
+
 
         <p>
             Learn Cybersecurity. Build Your Future.
         </p>
 
+
+        <p class="copyright">
+            © 2026 Cybersecurity Hub.
+            All Rights Reserved.
+        </p>
+
+
     </footer>
 
 
+    <!-- JavaScript -->
+
     <script>
 
+
         function encodeText() {
+
 
             let input =
                 document.getElementById("inputText").value;
 
-            let output =
-                btoa(input);
 
-            document.getElementById("outputText").value =
-                output;
+            try {
+
+
+                let output =
+                    btoa(unescape(encodeURIComponent(input)));
+
+
+                document.getElementById("outputText").value =
+                    output;
+
+
+            }
+
+
+            catch {
+
+
+                document.getElementById("outputText").value =
+                    "Unable to encode input";
+
+
+            }
+
 
         }
 
 
         function decodeText() {
 
+
             let input =
                 document.getElementById("inputText").value;
 
+
             try {
 
+
                 let output =
-                    atob(input);
+                    decodeURIComponent(
+                        escape(atob(input))
+                    );
+
 
                 document.getElementById("outputText").value =
                     output;
 
-            } catch {
+
+            }
+
+
+            catch {
+
 
                 document.getElementById("outputText").value =
                     "Invalid Base64 input";
 
+
             }
+
 
         }
 
 
         function clearText() {
 
-            document.getElementById("inputText").value = "";
 
-            document.getElementById("outputText").value = "";
+            document.getElementById("inputText").value =
+                "";
+
+
+            document.getElementById("outputText").value =
+                "";
+
 
         }
 
+
     </script>
+
 
 </body>
 
