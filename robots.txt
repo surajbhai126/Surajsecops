@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://surajbhai126.github.io/Surajsecops/sitemap.xml
