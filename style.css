@@ -664,3 +664,288 @@ footer p {
     }
 
 }
+
+
+/* =========================
+   AUTHENTICATION PAGE
+========================= */
+
+.auth-page {
+
+    min-height: 75vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 60px 20px;
+
+    background: #f4f7fb;
+
+}
+
+
+.auth-card {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.12);
+
+    text-align: center;
+
+}
+
+
+.auth-icon {
+
+    font-size: 50px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.auth-card h1 {
+
+    font-size: 32px;
+
+    color: #0f172a;
+
+    margin-bottom: 10px;
+
+}
+
+
+.auth-subtitle {
+
+    color: #64748b;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+
+}
+
+
+.auth-card form {
+
+    text-align: left;
+
+}
+
+
+.auth-card label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    margin-top: 18px;
+
+    font-weight: bold;
+
+    color: #334155;
+
+}
+
+
+.auth-card input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
+
+}
+
+
+.auth-card input:focus {
+
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+
+}
+
+
+.auth-btn {
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.auth-btn:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+.auth-message {
+
+    margin-top: 15px;
+
+    font-weight: bold;
+
+}
+
+
+.auth-links {
+
+    margin-top: 25px;
+
+    color: #64748b;
+
+    line-height: 1.8;
+
+}
+
+
+.auth-links a {
+
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+
+.auth-links a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+@media (max-width: 600px) {
+
+    .auth-card {
+
+        padding: 30px 22px;
+
+    }
+
+}
+
+/* =========================
+   GOOGLE LOGIN
+========================= */
+
+.auth-divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 25px 0;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+
+
+.auth-divider::before,
+.auth-divider::after {
+
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #e2e8f0;
+
+}
+
+
+.google-btn {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #334155;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+}
+
+
+.google-btn:hover {
+
+    background: #f8fafc;
+
+    border-color: #94a3b8;
+
+}
+
+
+.google-icon {
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+}
