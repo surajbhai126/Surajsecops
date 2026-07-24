@@ -13,7 +13,7 @@
     </title>
 
     <meta name="description"
-          content="Login to Cybersecurity Hub to access your cybersecurity learning profile and resources.">
+          content="Login to Cybersecurity Hub to continue your cybersecurity learning journey and access cybersecurity learning resources.">
 
     <meta name="robots"
           content="index, follow">
@@ -30,178 +30,221 @@
 <body>
 
 
-<!-- Navigation -->
+    <!-- Navigation -->
 
-<nav class="navbar">
+    <nav class="navbar">
 
-    <div class="logo">
-        🛡️ Cybersecurity Hub
-    </div>
-
-
-    <div class="nav-links">
-
-        <a href="index.html">
-            Home
-        </a>
-
-        <a href="cybersecurity.html">
-            Cybersecurity
-        </a>
-
-        <a href="networking.html">
-            Networking
-        </a>
-
-        <a href="vapt.html">
-            VAPT
-        </a>
-
-        <a href="tools.html">
-            Tools
-        </a>
-
-    </div>
-
-</nav>
-
-
-<!-- Login Section -->
-
-<main class="auth-page">
-
-
-    <div class="auth-card">
-
-
-        <div class="auth-icon">
-            🛡️
+        <div class="logo">
+            🛡️ Cybersecurity Hub
         </div>
 
 
-        <h1>
-            Welcome Back
-        </h1>
+        <div class="nav-links">
 
-
-        <p class="auth-subtitle">
-            Login to continue your cybersecurity learning journey.
-        </p>
-
-
-        <form id="loginForm">
-
-
-            <label for="email">
-                Email Address
-            </label>
-
-
-            <input
-                type="email"
-                id="email"
-                placeholder="Enter your email"
-                required>
-
-
-            <label for="password">
-                Password
-            </label>
-
-
-            <input
-                type="password"
-                id="password"
-                placeholder="Enter your password"
-                required>
-
-
-            <button
-                type="submit"
-                class="auth-btn">
-
-                Login
-
-            </button>
-
-            <div class="auth-divider">
-
-    <span>OR</span>
-
-</div>
-
-
-<button
-    type="button"
-    class="google-btn"
-    id="googleLoginBtn">
-
-    <span class="google-icon">
-        G
-    </span>
-
-    Continue with Google
-
-</button>
-
-
-        </form>
-
-
-        <p
-            id="loginMessage"
-            class="auth-message">
-        </p>
-
-
-        <div class="auth-links">
-
-            <a href="#">
-                Forgot Password?
+            <a href="index.html">
+                Home
             </a>
 
 
-            <p>
+            <a href="cybersecurity.html">
+                Cybersecurity
+            </a>
 
-                Don't have an account?
 
-                <a href="register.html">
-                    Create Account
-                </a>
+            <a href="networking.html">
+                Networking
+            </a>
+
+
+            <a href="vapt.html">
+                VAPT
+            </a>
+
+
+            <a href="tools.html">
+                Tools
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Login Section -->
+
+    <main class="auth-page">
+
+
+        <div class="auth-card">
+
+
+            <div class="auth-icon">
+                🛡️
+            </div>
+
+
+            <h1>
+                Welcome Back
+            </h1>
+
+
+            <p class="auth-subtitle">
+
+                Login to continue your
+                cybersecurity learning journey.
 
             </p>
+
+
+            <!-- Email Login Form -->
+
+            <form id="loginForm">
+
+
+                <label for="email">
+                    Email Address
+                </label>
+
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    autocomplete="email"
+                    required>
+
+
+                <label for="password">
+                    Password
+                </label>
+
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                    required>
+
+
+                <button
+                    type="submit"
+                    class="auth-btn">
+
+                    Login
+
+                </button>
+
+
+            </form>
+
+
+            <!-- Divider -->
+
+            <div class="auth-divider">
+
+                <span>
+                    OR
+                </span>
+
+            </div>
+
+
+            <!-- Google Login -->
+
+            <button
+                type="button"
+                class="google-btn"
+                id="googleLoginBtn">
+
+
+                <span class="google-icon">
+                    G
+                </span>
+
+
+                Continue with Google
+
+
+            </button>
+
+
+            <!-- Login Message -->
+
+            <p
+                id="loginMessage"
+                class="auth-message">
+            </p>
+
+
+            <!-- Account Links -->
+
+            <div class="auth-links">
+
+
+                <a href="#">
+
+                    Forgot Password?
+
+                </a>
+
+
+                <p>
+
+                    Don't have an account?
+
+                    <a href="register.html">
+
+                        Create Account
+
+                    </a>
+
+                </p>
+
+
+            </div>
+
 
         </div>
 
 
-    </div>
+    </main>
 
 
-</main>
+    <!-- Footer -->
+
+    <footer>
 
 
-<!-- Footer -->
-
-<footer>
-
-    <h3>
-        🛡️ Cybersecurity Hub
-    </h3>
+        <h3>
+            🛡️ Cybersecurity Hub
+        </h3>
 
 
-    <p>
-        Learn Cybersecurity. Build Your Future.
-    </p>
+        <p>
+            Learn Cybersecurity. Build Your Future.
+        </p>
 
 
-    <p class="copyright">
-        © 2026 Cybersecurity Hub.
-        All Rights Reserved.
-    </p>
+        <p class="copyright">
 
-</footer>
+            © 2026 Cybersecurity Hub.
+            All Rights Reserved.
 
-<script type="module" src="auth.js"></script>
+        </p>
+
+
+    </footer>
+
+
+    <!-- Firebase Authentication -->
+
+    <script
+        type="module"
+        src="auth.js">
+
+    </script>
+
 
 </body>
 
